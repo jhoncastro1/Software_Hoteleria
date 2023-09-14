@@ -20,8 +20,8 @@ public class Check_outEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer checkOutId;
 
-    @Column(name = "reservation_id")
-    private Integer reservationId;
+    @Column(name = "check_in_id")
+    private Integer checkInId;
 
     @JsonFormat(pattern = "dd-MM-yyyy")
     @Column(name = "check_out_date")

@@ -14,7 +14,7 @@ import java.sql.Date;
 @ToString
 public class Check_OutDTO implements Serializable {
     private Integer checkOutId;
-    private Integer reservationId;
+    private Integer checkInId;
     @JsonFormat(pattern = "dd-MM-yyyy")
     private Date checkOutDate;
     private Integer guestsCount;
