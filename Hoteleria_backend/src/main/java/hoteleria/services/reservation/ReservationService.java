@@ -77,7 +77,7 @@ public class ReservationService {
             Optional<Reservation_Entity> find = iReservationRepository.findById(reservationId);
             if (find.isPresent()){
                 String findReservationMethod = find.toString();
-                return IResponse.OPERATION_SUCCESS;
+                return findReservationMethod;
             }
             else {
                 return IResponse.OPERATION_FAIL;
