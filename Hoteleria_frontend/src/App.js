@@ -2,7 +2,7 @@
 function App() {
   return (
     <div  >
-     <h2>Hoteleria</h2>
+     <h2>Check-in</h2>
     </div>
   );
   
