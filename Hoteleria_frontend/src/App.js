@@ -2,7 +2,11 @@
 function App() {
   return (
     <div  >
-     <h2>Hoteleria</h2>
+      <header>
+        <h4>Home</h4>
+        <h4>Reservacion</h4>
+      </header>
+     <h2>Check-in</h2>
     </div>
   );
   
