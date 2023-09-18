@@ -17,10 +17,12 @@ public class UserEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer userId;
 
+    @Column(name = "user_status")
+    private Integer userStatus;
+
     @Column(name = "user_password")
     private String userPassword;
 
-    @Column(name = "user_status")
-    private Boolean userStatus;
+
 
 }
