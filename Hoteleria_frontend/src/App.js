@@ -1,14 +1,22 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+import Home from "./components/Home_page";
+import Login from "./components/Login";
+import Main from "./components/Main_Page";
+import Check from "./components/Check_in";
+import Navbar_Home from "./components/Navbar_Home";
+
 
 function App() {
-  return (
-    <div  >
-      <header>
-        <h4>Home</h4>
-        <h4>Reservacion</h4>
-      </header>
-     <h2>Check-in</h2>
-    </div>
-  );
+  return <div className="App">
+    <Navbar_Home/>
+    <Home/>
+    <Login/>
+    <Main/>
+    <Check/>
+    
+  </div>;
   
 }
 

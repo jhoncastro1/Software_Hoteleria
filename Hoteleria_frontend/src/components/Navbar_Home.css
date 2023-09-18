@@ -1,0 +1,26 @@
+/* Backgroun color */
+.navbar {
+    background-color: #95BFA4;
+  }
+  
+  /* Margin */
+  .navbar {
+    margin: 20px 0;
+    margin-left: 33px;
+    margin-right: 33px;
+    height: 65px;
+    border-radius: 20px;
+    font-family: spline;
+  }
+  
+  .nav-item.bold a{
+    font-weight: bold;
+    font-family: 'FuentePrincipal';
+  }
+  
+  @font-face {
+    font-family: "FuentePrincipal";
+    src: url('fonts/SplineSans-Bold.ttf') format('ttf');
+  }
+
+ 
