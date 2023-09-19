@@ -1,23 +1,34 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import Home from "./components/Home_page";
 import Login from "./components/Login";
-import Main from "./components/Main_Page";
-import Check from "./components/Check_in";
 import Navbar_Home from "./components/Navbar_Home";
-
+import Main from "./components/Main_Page";
 
 function App() {
-  return <div className="App">
-    <Navbar_Home/>
-    <Home/>
-    <Login/>
-    <Main/>
-    <Check/>
-    
-  </div>;
-  
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Navbar_Home /> {/* Se muestra solo en la página de inicio */}
+                <Home />
+              </>
+            }
+          />
+          <Route path="/login" element={<Login />} />
+          <Route path="/main" element={<Main/>} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
