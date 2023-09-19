@@ -1,5 +1,5 @@
 import React from 'react'
-
+import SenaLogo from '../images/LogoSena.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -9,10 +9,10 @@ const Navbar_Home = () => {
     return (
         <nav className="navbar navbar-expand-sm">
           <a className="navbar-brand">
-            <img src="../images/SenaLogo.png" width="50" height="30" />
+            <img src={SenaLogo} width="50" height="50" className="img-fluid" />
           </a>
-          <div className="navbar-collapse">
-            <ul className="navbar-nav mx-auto">
+          <div className="navbar-collapse nav-link d-flex align-items-center justify-content-center">
+            <ul className="navbar-nav mx-auto justify-content-center">
               <li className="nav-item bold">
                 <a className="nav-link" href="#">Regional Tolima</a>
               </li>
