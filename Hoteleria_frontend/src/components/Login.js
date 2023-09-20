@@ -31,17 +31,16 @@ function Login() {
 
             <h4 class="text-white mb-4">Bienvenidos de nuevo a tu</h4>
             <h1 class="text-white mb-4">SOFTWARE DE HOTELERÍA</h1>
-            <h4 class="text-white">Bienvenidos de nuevo a tu</h4>
+            <h4 class="text-white">Aprendiz del SENA</h4>
             
           </div>
 
 
 
-          <div className="login col-6 text-black d-flex align-items-center justify-content-center flex-column">
+          <div className="px-5 login col-6 text-black d-flex align-items-center justify-content-center flex-column">
             <form onSubmit={handleSubmit}>
-              <div>
+              <div className=''>
                 <div className="text-center">
-
                   <img src={Senalogo} width="30px" height="30px"></img>
                   <p>Regional tolima</p>
                   <br />
@@ -52,29 +51,34 @@ function Login() {
                   <p>Inicia sesion con tu cuenta asignada por el instructor de proyecto</p>
                   <br />
                 </div>
-                <label>Email:</label>
-                <input className="border-top-0 border-end-0 border-start-0"
-                
-                  type="email"
-                  value={email}
-                  onChange={handleEmailChange}
-                  required
-                  
-                />
-              </div>
-              <div>
-                <label>Contraseña:</label>
+                <div className='col-12 px-5'>
+                    <div className='col-12'>
+                      <label className='text-start w-100'>Email:</label>
+                      <div>
+                        <input className="border-top-0 border-end-0 border-start-0 justify-content-center"
+                          type="email"
+                          value={email}
+                          onChange={handleEmailChange}
+                          required/>
+                      </div>
+                    </div>
+                    <div className='col-12' >
+                      <label>Contraseña:</label>
 
-                <input className="border-top-0 border-end-0 border-start-0   class='bi bi-eye-slash'" 
-                  type="password"
-                  value={password}
-                  onChange={handlePasswordChange}
-                  required
-                  />
-                  <i class="bi bi-eye-slash"></i>
+                      <input className="border-top-0 border-end-0 border-start-0" 
+                      type="password"
+                      value={password}
+                      onChange={handlePasswordChange}
+                      required
+                      />
+                      <i class="bi bi-eye-slash"></i>
+                    </div>
+                    <br />
+                    <div className='col-12 d-flex justify-content-center text-center'>
+                      <button className='col-8' type="submit" href="/">Ingresar</button>
+                    </div>
+                </div>
               </div>
-              <br />
-              <button type="submit" href="/">Ingresar</button>
             </form>
           </div>
         </div>
