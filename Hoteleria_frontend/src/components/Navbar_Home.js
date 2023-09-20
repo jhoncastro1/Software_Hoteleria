@@ -11,6 +11,7 @@ const Navbar_Home = () => {
           <a className="navbar-brand">
             <img src={SenaLogo} width="50" height="50" className="img-fluid" />
           </a>
+          
           <div className="navbar-collapse nav-link d-flex align-items-center justify-content-center">
             <ul className="navbar-nav mx-auto justify-content-center">
               <li className="nav-item bold">
