@@ -18,6 +18,10 @@
     font-size: calc(1.3em);
     color: rgba(66, 66, 66, 0.7);
 }
+.font_size_letter{
+    font-size: calc(1em);
+    color: rgba(66, 66, 66, 0.7);
+}
 .svg_width{
     width: calc(5vh);
 }
