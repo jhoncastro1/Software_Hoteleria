@@ -8,6 +8,7 @@ import Home from "./components/Home_page";
 import Login from "./components/Login";
 import Navbar_Home from "./components/Navbar_Home";
 import Main from "./components/Main_Page";
+import AdminLogin from "./components/AdminLogin";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           />
           <Route path="/login" element={<Login />} />
           <Route path="/main" element={<Main/>} />
+          <Route path="/adminLogin" element={<AdminLogin/>} />
         </Routes>
       </div>
     </Router>
