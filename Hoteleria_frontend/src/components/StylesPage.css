@@ -1,3 +1,4 @@
+
 /*Encapsulamiento de columnas*/
 .room{
     padding: 5%;
@@ -29,6 +30,7 @@
 
     color: rgba(66, 66, 66, 0.5);
 }
+
 
 /*Color de fuente y tamaño del texto del contenido en los componentes de cuadro en la pagina de inicio*/
 .font_size_three{
@@ -118,6 +120,7 @@ a{
     border-radius: 20px;
     background-color: #03A64A;
 }
+
 
 /*Componente IR del home_Page color beige*/
 .div_w_four{
@@ -225,5 +228,3 @@ a{
     z-index: 1; /* Coloca el subrayado detrás de la palabra */
   }
   
-
-
