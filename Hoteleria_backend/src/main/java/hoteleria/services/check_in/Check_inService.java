@@ -3,8 +3,10 @@ package hoteleria.services.check_in;
 import hoteleria.commons.constans.response.IResponse;
 import hoteleria.commons.converter.checkIn.CheckInConverter;
 import hoteleria.commons.domains.dto.check_In.Check_InDTO;
+import hoteleria.commons.domains.dto.check_In.IForm;
 import hoteleria.model.entity.check_in.Check_inEntity;
 import hoteleria.model.repository.check_in.ICheck_inRepository;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Log4j2
 public class Check_inService {
 
 
@@ -92,5 +95,23 @@ public class Check_inService {
         }
     }
 
+    public List<IForm> customFind(){
+        try {
+            List<IForm> find = this.iCheckInRepository.customFind();
+
+            if (!find.isEmpty()){
+                System.out.println(find.get(0).getNoHabitacion());
+                System.out.println(find.get(0).getNombre() + find.get(0).getApellido());
+                System.out.println(find.get(0).getNumeroPersonas());
+                 return find;
+            }else {
+                return find;
+            }
+
+        }catch (Exception e)
+        {
+            return null;
+        }
+    }
 
 }
