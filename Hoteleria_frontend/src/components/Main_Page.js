@@ -1,5 +1,5 @@
 import React from 'react'
-import './Main_Page.css'
+import './StylesPage.css'
 
 const Main_Page = () => {
   return (
@@ -7,10 +7,12 @@ const Main_Page = () => {
       <section className='d-flex align-items-center col-12 min-vh-100 room'>
         <div className='col-6 room'>
           <div className='py-5'>
-            <h1 className='display-1 font_wig'>Tú aprendizaje es lo <span className='underline'>Mas importante</span> Para nosotros</h1>
+            <h1 className='display-3 font_wig'>
+              Tú aprendizaje es lo <div className='underline-up'><span class="palabra">Mas importante</span><div class="subrayado"></div></div> Para nosotros
+            </h1> 
           </div>
-          <div className='py-4'>
-            <h4 className='font_size'>Estamos comprometidos en proporcionarte las herramientas y recursos necesarios para que alcances tus metas de formación en hotelería de la manera más efectiva y enriquecedora posible</h4>
+          <div className='py-4 col-8 justify-content-center '>
+            <p className='font_size'>Estamos comprometidos en proporcionarte las herramientas y recursos necesarios para que alcances tus metas de formación en hotelería de la manera más efectiva y enriquecedora posible</p>
           </div>
           <div className='py-5 col-12 d-flex justify-content-center text-center'>
             <a type='submit' href='/' className='py-5 my-5 col-4'>
@@ -35,8 +37,8 @@ const Main_Page = () => {
           </div>
           
         </div>
-        <div className='col-6 d-flex justify-content-center'>
-          <div className='col-6'>
+        <div className='col-6 d-flex '>
+          <div className='col-4 d-flex align-items-center'>
             <div className='col-8 bg_color'>
               <div className='px-5 py-4'>
                 <div className='div_w_one'></div>
@@ -50,8 +52,7 @@ const Main_Page = () => {
               </div>
             </div>
           </div>
-          <div className='col-6'>
-            <div></div>
+          <div className='col-6  '>
             <div className='col-8 bg_color_two'>
               <div className='px-5 py-4'>
                 <div className='div_w_two'></div>

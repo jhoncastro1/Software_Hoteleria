@@ -1,25 +1,29 @@
 import React from 'react'
-import './Check_in.css'
+
 
 const Check_in = () => {
     return ( 
       <main>
         <section className='d-flex align-items-center col-12 min-vh-100 room'>
           <div className='col-6 room'>
-            <div className='py-5 col-12 d-flex  text-center'>
-              <h3 className='div_p'>Hoteleria</h3>
+            <div className='py-4 col-12 d-flex  text-center'>
+              <div className='div_p'>    
+                <p className='font_size_four text-center'>Hoteleria</p>
+              </div>
             </div>
             <div className='py-5'>
-            <div class="texto-con-subrayado">
-                <span class="palabra">Check-In</span>
-                <div class="subrayado"></div>
+            <div class="underline-up">
+                <span class="palabra display-1">Check-In</span>
+                <div class="subrayado-one"></div>
             </div>           
             </div>
-            <div className='py-4'>
+            <div className='py-3'>
               <h4 className='font_size'>Este proceso es fundamental para garantizar una experiencia suave y cómoda durante la estadía de los huéspedes</h4>
             </div>
             <div>
-              <h2 className='div_t'>Todos los formatos</h2>
+              <div className='div_t'>
+                <p className='font_size_five'>Todos los formatos</p>
+              </div>
             </div>
             <div className='py-5 col-12 d-flex justify-content-center text-center'>
               <a type='submit' href='/' className='py-5 my-5 col-4 border_fz'>
