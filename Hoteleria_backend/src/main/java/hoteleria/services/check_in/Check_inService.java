@@ -95,6 +95,7 @@ public class Check_inService {
         }
     }
 
+    /**
     public List<IForm> customFind(){
         try {
             List<IForm> find = this.iCheckInRepository.customFind();
@@ -113,5 +114,6 @@ public class Check_inService {
             return null;
         }
     }
+     */
 
 }

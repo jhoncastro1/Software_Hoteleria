@@ -2,10 +2,12 @@ package hoteleria.model.entity.admin;
 
 import hoteleria.commons.constans.tables.ITables;
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+@Data
 @Getter
 @Setter
 @ToString
@@ -26,8 +28,5 @@ public class Admin {
 
     @Column(name = "password")
     private String password;
-
-    @Column(name = "user_id")
-    private Integer userCustomerId;
 
 }
