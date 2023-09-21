@@ -41,4 +41,8 @@ public class RoomListGroupEntity {
     @Column(name = "no_room")
     private String noRoom;
 
+    @Column(name = "name_student")
+    private String nameStudent;
+
+
 }

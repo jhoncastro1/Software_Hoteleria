@@ -32,4 +32,6 @@ public class ReservationDTO {
     private Integer id_assigned_room;
     private Integer nightsCount;
     private boolean typeReservation;
+    private String nameStudent;
+
 }

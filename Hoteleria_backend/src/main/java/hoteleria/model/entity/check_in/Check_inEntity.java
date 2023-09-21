@@ -3,6 +3,7 @@ package hoteleria.model.entity.check_in;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import hoteleria.commons.constans.tables.ITables;
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -11,6 +12,7 @@ import java.sql.Date;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+@Data
 @Getter
 @Setter
 @ToString
@@ -47,5 +49,8 @@ public class Check_inEntity {
 
     @Column(name = "id_assigned_room")
     private Integer idAssignedRoom;
+
+    @Column(name = "name_student")
+    private String nameStudent;
 
 }

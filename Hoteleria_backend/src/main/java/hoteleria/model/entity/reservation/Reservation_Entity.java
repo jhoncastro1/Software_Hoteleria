@@ -62,4 +62,8 @@ public class Reservation_Entity {
 
     @Column(name = "type_reservation")
     private boolean typeReservation;
+
+    @Column(name = "name_student")
+    private String nameStudent;
+
 }

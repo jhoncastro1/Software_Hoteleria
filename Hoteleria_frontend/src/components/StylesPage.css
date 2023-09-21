@@ -1,3 +1,4 @@
+
 /*Encapsulamiento de columnas*/
 .room{
     padding: 5%;
@@ -224,6 +225,3 @@ a{
     bottom: 0;
     z-index: 1; /* Coloca el subrayado detrás de la palabra */
   }
-  
-
-
