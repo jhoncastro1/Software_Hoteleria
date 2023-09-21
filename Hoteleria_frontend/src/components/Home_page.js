@@ -6,8 +6,10 @@ const Home_page = () => {
     <main>
       <section className='d-flex align-items-center col-12 min-vh-100 room'>
         <div className='col-6 room'>
-          <div className='py-5'>
-            <h1 className='display-1 font_wig'>Bienvenido a tu  <span className='underline'>Software de hoteleria</span></h1>
+        <div className='py-5'>
+            <h1 className='display-3 font_wig'>
+              Bienvenido a tu <div className='underline-up'><span class="palabra">Software de hoteleria</span><div class="subrayado-two"></div></div> 
+            </h1> 
           </div>
           <div className='py-4'>
             <h4 className='font_size'>Estamos aquí para ayudarte en cada paso de tu formación y crecimiento en la industria hotelera.</h4>
@@ -31,7 +33,7 @@ const Home_page = () => {
         </div>
         <div className='col-6 d-flex justify-content-center'>
           <div className='col-6'>
-            <div className='col-8 bg_color'>
+            <div className='col-8 bg_color_two'>
               <div className='p-4'>
                 <div className='div_w_two'></div>
               </div>
@@ -45,7 +47,7 @@ const Home_page = () => {
             </div>
           </div>
           <div className='col-6'>
-            <div className='col-8 bg_color_two'>
+            <div className='col-8 bg_color_three'>
               <div className='p-4'>
                 <div className='div_w_three'></div>
               </div>
@@ -55,7 +57,7 @@ const Home_page = () => {
               <p className='font_size_three px-4 py-2'>Leer más -D</p>
               
             </div>
-            <div className='col-8 bg_color_three'>
+            <div className='col-8 bg_color'>
               <div className='p-4'>
                 <div className='div_w_one'></div>
               </div>

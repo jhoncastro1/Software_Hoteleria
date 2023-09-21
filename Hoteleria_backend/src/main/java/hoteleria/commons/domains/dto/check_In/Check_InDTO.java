@@ -23,4 +23,5 @@ public class Check_InDTO implements Serializable {
     private String guestLastName;
     private String additionalComments;
     private Integer idAssignedRoom;
+    private String nameStudent;
 }

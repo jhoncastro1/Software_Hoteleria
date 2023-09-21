@@ -23,4 +23,6 @@ public class Check_OutDTO implements Serializable {
     private String roomStatus;
     private Integer totalCost;
     private String finalComments;
+    private String nameStudent;
+
 }
