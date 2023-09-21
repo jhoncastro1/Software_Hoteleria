@@ -36,7 +36,7 @@ const Main_Page = () => {
         </div>
         <div className='col-6 d-flex justify-content-center'>
           <div className='col-6'>
-            <div className='col-8 bg_color'>
+            <div className='col-8 bg_color_three'>
               <div className='px-5 py-4'>
                 <div className='div_w_one'></div>
               </div>
@@ -50,7 +50,7 @@ const Main_Page = () => {
             </div>
           </div>
           <div className='col-6'>
-            <div className='col-8 bg_color_two'>
+            <div className='col-8 bg_color'>
               <div className='px-5 py-4'>
                 <div className='div_w_two'></div>
               </div>
