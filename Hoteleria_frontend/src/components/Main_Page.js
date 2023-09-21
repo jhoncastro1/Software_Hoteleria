@@ -1,5 +1,5 @@
 import React from 'react'
-import './Main_Page.css'
+import './StylesPage.css'
 
 const Main_Page = () => {
   return (
