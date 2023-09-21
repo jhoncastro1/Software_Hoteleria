@@ -37,7 +37,6 @@ const Main_Page = () => {
           </div>
           
         </div>
-
         <div className='col-6 d-flex '>
           <div className='col-4 d-flex align-items-center'>
             <div className='col-8 bg_color'>
@@ -53,7 +52,6 @@ const Main_Page = () => {
               </div>
             </div>
           </div>
-
           <div className='col-6  '>
             <div className='col-8 bg_color_two'>
               <div className='px-5 py-4'>
