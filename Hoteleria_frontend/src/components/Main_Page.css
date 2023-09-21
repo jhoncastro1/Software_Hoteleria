@@ -7,9 +7,10 @@
     padding: 5%;
 }
 .border_sp{
+    border-color: black;
     border-left: 1.5px solid;
     border-right: 1.5px solid;
-    border-color: black;
+
 }
 .font_wig{
     font-weight: 500;

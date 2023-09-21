@@ -1,0 +1,33 @@
+.div_p{
+    width: calc(10vw);
+    height: calc(3vh);
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: #000 solid 3px;
+    
+}
+.div_t{
+    width: calc(16vw);
+    height: calc(5vh);
+    border-radius: 40px;
+    color: #ffffff;
+    background-color: #90A19D;
+    padding-top: 0.7ch;
+}
+  .texto-con-subrayado {
+    position: relative;
+  }
+  
+  .palabra {
+    position: relative;
+    z-index: 2; /* Coloca la palabra sobre el subrayado */
+  }
+  
+  .subrayado {
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Puedes ajustar la altura según tus preferencias */
+    background-color: #FEB5CB; /* Color del subrayado */
+    bottom: 0;
+    z-index: 1; /* Coloca el subrayado detrás de la palabra */
+  }
