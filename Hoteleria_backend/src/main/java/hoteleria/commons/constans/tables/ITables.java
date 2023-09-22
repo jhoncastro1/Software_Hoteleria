@@ -10,8 +10,6 @@ public interface ITables {
     String TABLE_RECORD_RESERVATIONS = "record_reservations";
     String TABLE_RESERVATIONS = "reservations";
     String TABLE_ROOM_LIST_GROUP = "room_list_group";
-    String TABLE_ROOM_STATUS = "room_status";
-    String TABLE_USER = "user";
-
+    String TABLE_GROUP_INSTRUCTIONS = "group_instructions";
 
 }
