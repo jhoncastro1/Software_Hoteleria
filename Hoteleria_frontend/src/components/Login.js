@@ -8,7 +8,7 @@ import Senalogo from '../images/LogoSena.png'
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+ 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
@@ -25,7 +25,7 @@ function Login() {
   };
 
   return (
-
+        
         <div className="col-12 row">
           <div className="software text-white col-6 min-vh-100 text-white d-flex align-items-center justify-content-center flex-column info">
 
@@ -41,14 +41,12 @@ function Login() {
             <form onSubmit={handleSubmit}>
               <div className=''>
                 <div className="text-center">
-                  <img src={Senalogo} width="30px" height="30px"></img>
+                  <img src={Senalogo} alt='LogoSena' width="50px" height="50px"></img>
                   <p>Regional tolima</p>
-                  <br />
-                  
-                  <br />
+                  <br /><br />
                   <h2>Iniciar sesión</h2>
-
-                  <p>Inicia sesion con tu cuenta asignada por el instructor de proyecto</p>
+                  <p>Inicia sesión con tu cuenta asignada</p>
+                  <p> por el instructor de proyecto</p>
                   <br />
                 </div>
                 <div className='col-12 px-5'>
@@ -71,11 +69,14 @@ function Login() {
                       onChange={handlePasswordChange}
                       required
                       />
-                      <i class="bi bi-eye-slash"></i>
                     </div>
                     <br />
                     <div className='col-12 d-flex justify-content-center text-center'>
                       <button className='col-8' type="submit" href="/">Ingresar</button>
+                    </div>
+                    <br /><br /><br />
+                    <div className='text-center'  >
+                      <p className='pie mt-5' >Proyecto de Hotelería</p>
                     </div>
                 </div>
               </div>
