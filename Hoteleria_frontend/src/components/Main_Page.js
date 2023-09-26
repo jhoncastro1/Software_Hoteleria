@@ -4,7 +4,7 @@ import './StylesPage.css'
 const Main_Page = () => {
   return (
     <main>
-      <section className='d-flex align-items-center col-12 min-vh-100 room'>
+      <section className='d-flex  col-12 min-vh-100 room'>
         <div className='col-6 room'>
           <div className='py-5'>
             <h1 className='display-3 font_wig'>
@@ -37,8 +37,8 @@ const Main_Page = () => {
           </div>
           
         </div>
-        <div className='col-6 d-flex '>
-          <div className='col-4 d-flex align-items-center'>
+        <div className='col-6 d-flex'>
+          <div className='col-2 d-flex contenedor-one'>
             <div className='col-8 bg_color'>
               <div className='px-5 py-4'>
                 <div className='div_w_one'></div>
@@ -52,7 +52,7 @@ const Main_Page = () => {
               </div>
             </div>
           </div>
-          <div className='col-6  '>
+          <div className='col-6 m-auto contener-two'>
             <div className='col-8 bg_color_two'>
               <div className='px-5 py-4'>
                 <div className='div_w_two'></div>
@@ -65,19 +65,22 @@ const Main_Page = () => {
                 </svg>
               </div>
             </div>
-            <div className='p-4'></div>
-            <div className='col-8 bg_color_three'>
-              <div className='px-5 py-4'>
-                <div className='div_w_three'></div>
+            <div className='p-5'></div>
+              <div className='col-4 d-flex align-items-center'>
+                <div className='p-3'></div>
+                  <div className='col-8 bg_color_three'>
+                    <div className='px-5 py-4'>
+                      <div className='div_w_three'></div>
+                    </div>
+                    <h3 className='font_size font_color px-5'>Check-out</h3>
+                    <p className='font_size_letter px-5'>Es un acuerdo formal entre un cliente y un establecimiento</p>
+                    <div className='text-center'>
+                      <svg xmlns="http://www.w3.org/2000/svg" class='svg_width_one py-4' fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"/>
+                      </svg>
+                    </div>
+                  </div>
               </div>
-              <h3 className='font_size font_color px-5'>Check-out</h3>
-              <p className='font_size_letter px-5'>Es un acuerdo formal entre un cliente y un establecimiento</p>
-              <div className='text-center'>
-                <svg xmlns="http://www.w3.org/2000/svg" class='svg_width_one py-4' fill="currentColor" viewBox="0 0 16 16">
-                  <path d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"/>
-                </svg>
-              </div>
-            </div>
           </div>
         </div>
       </section>
