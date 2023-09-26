@@ -1,0 +1,236 @@
+
+/*Encapsulamiento de columnas*/
+.room{
+    padding: 5%;
+}
+
+/*Lineas que dividen los iconos*/
+.border_sp{
+    border-color: black;
+    border-left: 1.5px solid;
+    border-right: 1.5px solid;
+
+}
+
+/*Tamaño del grosor del titulo*/
+.font_wig{
+    font-weight: 500;
+}
+
+/*Color de fuente y tamaño del contenido debajo del titulo*/
+.font_size{
+    
+    font-size: calc(1.3em);
+    color: rgba(66, 66, 66, 0.7);
+}
+
+/*Color de fuente y tamaño del texto de iniciar sesion en los componentes de cuadro en la pagina de inicio*/
+.font_size_two{
+    font-size: calc(1em);
+
+    color: rgba(66, 66, 66, 0.5);
+}
+
+/*Color de fuente y tamaño del texto del contenido en los componentes de cuadro en la pagina de inicio*/
+.font_size_three{
+    font-size: calc(1em);
+
+    color: rgba(66, 66, 66, 0.75);
+
+}
+
+/*Color de fuente y tamaño del texto del contenido en los componentes de cuadro en la pagina de inicio*/
+.font_size_four{
+    font-size: calc(1em);
+    font-weight: bold;
+    color: rgba(0, 0, 0, 1.0);
+    padding-top: 0.3ch;
+}
+
+/*Color de fuente y tamaño del texto del contenido en los componentes de cuadro en la pagina de inicio*/
+.font_size_five{
+    font-size: calc(1em);
+    font-weight: bold;
+    color: rgb(247, 247, 247);
+    padding-top: 1.5ch;
+    text-align: center;
+    
+}
+
+/*Color de fuente y tamaño del contenido de los cuadro componentes*/
+.font_size_letter{
+    font-size: calc(1em);
+    color: rgba(66, 66, 66, 0.7);
+}
+
+/*Tamaño de los iconos SVG*/
+.svg_width{
+    width: calc(5vh);
+}
+
+/*Transicion de los iconos*/
+.svg_width:hover{
+    width: calc(6vh);
+    transition: 0.5s;
+}
+
+/*Color de los iconos*/
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/*Tamaño de los iconos SVG del componente cuadro*/
+.svg_width_one{
+    width: calc(3vh);
+}
+
+/*Color del titulo del componente cuadro*/
+.font_color{
+    color: black;
+}
+/*Color del texto del componente IR administrador*/
+.font_color_two{
+    font-weight: bold;
+    font-size: calc(1.3em);
+    color: white
+}
+
+
+/*Componente de adorno de los cuadros de inicio y main Verde oscuro*/
+.div_w_one{
+    width: calc(3vw);
+    height: calc(2.5vh);
+    border-radius: 20px;
+    background-color: #0F6466;
+}
+
+/*Componente de adorno de los cuadros de inicio y main marron*/
+.div_w_two{
+    width: calc(3vw);
+    height: calc(2.5vh);
+    border-radius: 20px;
+    background-color: #A68F4B;
+}
+/*Componente de adorno de los cuadros de inicio y main verde*/
+.div_w_three{
+    width: calc(3vw);
+    height: calc(2.5vh);
+    border-radius: 20px;
+    background-color: #03A64A;
+}
+
+/*Componente IR del home_Page color beige*/
+.div_w_four{
+    width: calc(7vw);
+    height: calc(2.5vh);
+    border-radius: 20px;
+    background-color: #D9B07E;
+}
+
+/*Componente IR del home_Page color gris*/
+.div_w_five{
+    width: calc(7vw);
+    height: calc(2.5vh);
+    border-radius: 20px;
+    background-color: #2C3532;
+}
+
+
+
+
+/*Componente cuadro color verde oscuro */
+.bg_color{
+    width: 260px;
+    height: 310px;
+    background-color: #D2E8E3;
+    border-radius: 20px;
+}
+
+/*Componente cuadro color beige/naranja*/
+.bg_color_two{
+    width: 260px;
+    height: 310px;
+    background-color: #F2EBDC;
+    border-radius: 20px;
+}
+
+/*Componente verde super claro*/
+.bg_color_three{
+    width: 260px;
+    height: 310px;
+    background-color: #E4F2E7;
+    border-radius: 20px;
+}
+
+
+/*Componente Hoteleria */
+  .div_p{
+    width: calc(200px);
+    height: calc(35px);
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: #000 solid 3px;
+    color: black;
+
+}
+
+/* Componente Todos los formatos Style checking*/
+.div_t{
+    width: calc(250px);
+    height: calc(55px);
+    border-radius: 30px;
+    background-color: #90A19D;
+   
+}
+
+/*Underline baja el texto una linea  */
+  .underline-up {
+    position: relative;
+  }
+  
+  /*Este estilo alinea el texto con el subrayado */
+  .palabra {
+    font-weight: 500;
+    position: relative;
+    z-index: 2; /* Coloca la palabra sobre el subrayado */
+  }
+
+    /*Subrayado del titulo main*/
+    .subrayado{
+        position: absolute;
+        width: 73%;
+        height: 36px; /* Puedes ajustar la altura según tus preferencias */
+        background-color: #FEB5CB; /* Color del subrayado */
+        bottom: 0;
+        z-index: 1; /* Coloca el subrayado detrás de la palabra */
+    }
+
+  /*Subrayado del titutlo checkin*/
+  .subrayado-one {
+    position: absolute;
+    width: 49%;
+    height: 36px; /* Puedes ajustar la altura según tus preferencias */
+    background-color: #FEB5CB; /* Color del subrayado */
+    bottom: 0;
+    z-index: 1; /* Coloca el subrayado detrás de la palabra */
+  }
+
+  /*Subrayado del titutlo de INICIO*/
+  .subrayado-two {
+    position: absolute;
+    width: 98%;
+    height: 36px; /* Puedes ajustar la altura según tus preferencias */
+    background-color: #FEB5CB; /* Color del subrayado */
+    bottom: 0;
+    z-index: 1; /* Coloca el subrayado detrás de la palabra */
+  }
+  .contenedor-one{
+    height: 75%;
+    align-items: center;
+  }
+  .contener-two{
+    height: 90%;
+    align-items: center;
+  }
+  
