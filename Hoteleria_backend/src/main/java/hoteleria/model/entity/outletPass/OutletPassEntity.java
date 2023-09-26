@@ -37,7 +37,6 @@ public class OutletPassEntity {
     @Column(name = "key_room")
     private boolean keyRoom;
 
-    @Column(name = "name_student")
-    private String nameStudent;
-
+    @Column(name = "cashier_name")
+    private String cashierName;
 }

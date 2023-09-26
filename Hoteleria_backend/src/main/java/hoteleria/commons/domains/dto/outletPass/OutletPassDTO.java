@@ -23,6 +23,5 @@ public class OutletPassDTO {
     private Integer idAssignedRoom;
     private Integer guestsCount;
     private boolean keyRoom;
-    private String nameStudent;
-
+    private String cashierName;
 }

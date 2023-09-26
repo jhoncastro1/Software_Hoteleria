@@ -2,14 +2,13 @@ package hoteleria.model.entity.check_out;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import hoteleria.commons.constans.tables.ITables;
 import jakarta.persistence.*;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 import java.sql.Date;
 
-@Data
+
 @Getter
 @Setter
 @ToString
@@ -46,8 +45,5 @@ public class Check_outEntity {
 
     @Column(name = "final_comments")
     private String finalComments;
-
-    @Column(name = "name_student")
-    private String nameStudent;
 
 }
