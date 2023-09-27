@@ -1,5 +1,6 @@
 package hoteleria.model.entity.check_out;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import hoteleria.commons.constans.tables.ITables;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,7 +13,7 @@ import java.sql.Date;
 @Setter
 @ToString
 @Entity
-@Table(name = "checkout")
+@Table(name = ITables.TABLE_CHECK_OUT)
 public class Check_outEntity {
 
     @Id

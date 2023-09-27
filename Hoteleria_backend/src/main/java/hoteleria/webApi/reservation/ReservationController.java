@@ -16,7 +16,6 @@ public class ReservationController {
 
     @PostMapping(IReservationEndPoints.RESERVATION_CREATE_URL)
     public String createReservation(@RequestBody Reservation_Entity reservationEntity){
-        System.out.println("entro a el controlador " + reservationEntity.getContact_email());
         return this.reservationService.createReservation(reservationEntity);
     }
 

@@ -1,6 +1,7 @@
 package hoteleria.model.entity.reservation;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import hoteleria.commons.constans.tables.ITables;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,7 +13,7 @@ import java.sql.Date;
 @Setter
 @ToString
 @Entity
-@Table(name = "reservations")
+@Table(name = ITables.TABLE_RESERVATIONS)
 public class Reservation_Entity {
 
     @Id
@@ -56,4 +57,9 @@ public class Reservation_Entity {
     @Column(name = "id_assigned_room")
     private Integer id_assigned_room;
 
+    @Column(name = "nights_count")
+    private Integer nightsCount;
+
+    @Column(name = "type_reservation")
+    private boolean typeReservation;
 }

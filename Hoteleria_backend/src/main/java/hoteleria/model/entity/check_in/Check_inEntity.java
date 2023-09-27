@@ -1,19 +1,21 @@
 package hoteleria.model.entity.check_in;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import hoteleria.commons.constans.tables.ITables;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 import java.sql.Date;
+import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Getter
 @Setter
 @ToString
 @Entity
-@Table(name = "checkin")
+@Table(name = ITables.TABLE_CHECK_IN)
 public class Check_inEntity {
 
     @Id
@@ -29,7 +31,7 @@ public class Check_inEntity {
 
     @Column(name = "check_in_date")
     @JsonFormat(pattern = "dd-MM-yyyy")
-    private Date checkInDate;
+    private LocalDate checkInDate;
 
     @Column(name = "guests_count")
     private Integer guestsCounts;

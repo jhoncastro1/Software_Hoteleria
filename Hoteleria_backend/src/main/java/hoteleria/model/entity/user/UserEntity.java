@@ -1,5 +1,6 @@
 package hoteleria.model.entity.user;
 
+import hoteleria.commons.constans.tables.ITables;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,7 +10,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @Entity
-@Table(name = "user")
+@Table(name = ITables.TABLE_USER)
 public class UserEntity {
 
     @Id
