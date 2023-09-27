@@ -59,6 +59,7 @@ public class Check_outService {
             Optional<Check_outEntity> find = this.iCheckOutRepository.findById(checkOutDTO.getCheckOutId());
             if (find.isPresent()) {
                 Check_outEntity checkOutEntity = checkOutConverter.convertCheckOutDTOToCheckOutEntity(checkOutDTO);
+                this.iCheckOutRepository.save(checkOutEntity);
                 return IResponse.OPERATION_SUCCESS;
             } else {
                 return IResponse.OPERATION_FAIL;
