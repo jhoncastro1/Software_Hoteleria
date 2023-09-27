@@ -4,6 +4,10 @@
     padding: 5%;
 }
 
+.room-one{
+    padding: 9vw;
+}
+
 /*Lineas que dividen los iconos*/
 .border_sp{
     border-color: black;
@@ -19,7 +23,7 @@
 
 /*Color de fuente y tamaño del contenido debajo del titulo*/
 .font_size{
-    
+    font-weight: bold;
     font-size: calc(1.3em);
     color: rgba(66, 66, 66, 0.7);
 }
@@ -49,7 +53,7 @@
 
 /*Color de fuente y tamaño del texto del contenido en los componentes de cuadro en la pagina de inicio*/
 .font_size_five{
-    font-size: calc(1em);
+    font-size: calc(1.1em);
     font-weight: bold;
     color: rgb(247, 247, 247);
     padding-top: 1.5ch;
@@ -63,9 +67,27 @@
     color: rgba(66, 66, 66, 0.7);
 }
 
+/*Color de fuente y tamaño del contenido de los cuadro componentes de checkIn*/
+.font_size_letter_one{
+    font-size: calc(0.9em);
+    color: rgba(66, 66, 66, 0.7);
+}
+
 /*Tamaño de los iconos SVG*/
 .svg_width{
     width: calc(5vh);
+}
+
+.icon-container {
+    display: flex; /* Usamos flexbox para alinear verticalmente los elementos */
+    align-items: center; /* Centramos verticalmente los elementos */
+  }
+
+.line{
+    height: 1px; /* Altura de la línea */
+    width: 270px; /* Ancho de la línea */
+    background-color: black; /* Color de la línea */
+    margin-left: 10px; /* Espacio entre el icono y la línea (ajusta según necesites) */
 }
 
 /*Transicion de los iconos*/
@@ -88,6 +110,10 @@ a{
 /*Color del titulo del componente cuadro*/
 .font_color{
     color: black;
+}
+
+.font_color_one{
+    color: #ffffff;
 }
 /*Color del texto del componente IR administrador*/
 .font_color_two{
@@ -163,6 +189,27 @@ a{
     border-radius: 20px;
 }
 
+.bg_color_four{
+    width: 350px;
+    height: 360px;
+    background-color: #F2EBDC;
+    border-radius: 20px;
+}
+
+.bg_color_five{
+    width: 270px;
+    height: 250px;
+    background-color: #D2E8E3;
+    border-radius: 20px;
+}
+
+.bg_color_six{
+    width: 270px;
+    height: 250px;
+    background-color: #E4F2E7;
+    border-radius: 20px;
+}
+
 
 /*Componente Hoteleria */
   .div_p{
@@ -225,7 +272,7 @@ a{
     bottom: 0;
     z-index: 1; /* Coloca el subrayado detrás de la palabra */
   }
-  .contenedor-one{
+  .contener-one{
     height: 75%;
     align-items: center;
   }
@@ -233,4 +280,4 @@ a{
     height: 90%;
     align-items: center;
   }
-  
+
