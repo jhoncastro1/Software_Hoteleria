@@ -10,6 +10,7 @@ import Navbar_Home from "./components/Navbar_Home";
 import Main from "./components/Main_Page";
 import AdminLogin from "./components/AdminLogin";
 import Check_in from "./components/Check_in";
+import Reservacion_Grupal from "./components/Reservacion_Grupal";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/main" element={<Main/>} />
           <Route path="/adminLogin" element={<AdminLogin/>} />
           <Route path="/checkIn" element={<Check_in/>}/>
+          <Route path="/reservacionGrupal" element={<Reservacion_Grupal/>}/>
         </Routes>
       </div>
     </Router>
