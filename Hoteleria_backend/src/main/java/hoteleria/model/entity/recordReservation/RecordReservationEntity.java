@@ -61,8 +61,4 @@ public class RecordReservationEntity {
 
     @Column(name = "remarks")
     private String remarks;
-
-    @Column(name = "name_student")
-    private String nameStudent;
-
 }

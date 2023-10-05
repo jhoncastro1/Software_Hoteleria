@@ -13,5 +13,5 @@ public interface ITables {
     String TABLE_ROOM_STATUS = "room_status";
     String TABLE_USER = "user";
 
-
+    String TABLE_HOTEL_REGISTRATION = "hotel_registration";
 }
