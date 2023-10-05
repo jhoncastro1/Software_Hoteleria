@@ -1,38 +1,18 @@
-/* Backgroun color */
 .navbar {
-    background-color: #95BFA4;
-  }
-  
-  /* Margin */
-  .navbar {
-    margin: 20px 0;
-    margin-left: 35px;
-    margin-right: 35px;
-    height: 65px;
-    border-radius: 20px;
-    font-family: spline;
-   
-  }
-  
-  .nav-item.bold a{
-    font-weight: bold;
-    font-family: 'FuentePrincipal';
-    color: black;
-  }
+  border-radius: 15px;
+  background-color: #95BFA4;
+  width: 95%;
+  margin: 10px;
+}
 
- 
-
-  .nav-item {
-    margin-left: 10px; /* Ajusta el valor según tus necesidades */
-    margin-right: 10px; /* Ajusta el valor según tus necesidades */
-  }
+.navbar-toggler{
+  width: 60px;
+}
+.navbar-toggler:hover {
+  background-color: #799b85 ;
   
+}
 
-  
-  
-  @font-face {
-    font-family: "FuentePrincipal";
-    src: url('fonts/SplineSans-Bold.ttf') format('ttf');
-  }
-
- 
+.logo{
+  margin-left: 30px;
+}
