@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-import "./AdminLogin.css"; // Importar el archivo CSS
+import "./Login.css"; // Importar el archivo CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Senalogo from '../images/LogoSena.png'
 
-function Login() {
+function AdminLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -41,7 +41,8 @@ function Login() {
             <form onSubmit={handleSubmit}>
               <div className=''>
                 <div className="text-center">
-                  <img src={Senalogo} alt='SenaLogo' width="50px" height="50px"></img>
+
+                  <img src={Senalogo} width="30px" height="30px"></img>
                   <p>Regional tolima</p>
                   <br /><br />
                   <h2>Iniciar sesión</h2>
@@ -63,29 +64,25 @@ function Login() {
                     <div className='col-12' >
                       <label>Contraseña:</label>
 
-                      <input className="border-top-0 border-end-0 border-start-0" 
-                      type="password"
-                      value={password}
-                      onChange={handlePasswordChange}
-                      required
-                      />
-                      <i class="bi bi-eye-slash"></i>
-                    </div>
-                    <br />
-                    <div className='col-12 d-flex justify-content-center text-center'>
-                      <button className='col-8' type="submit" href="/">Ingresar</button>
-                    </div>
-                    <br /><br /><br />
-                    <div className='text-center'  >
-                      <p className='pie mt-5'>Proyecto de hoteleria</p>
-                    </div>
-                </div>
+                <input className="border-top-0 border-end-0 border-start-0   class='bi bi-eye-slash'" 
+                  type="password"
+                  value={password}
+                  onChange={handlePasswordChange}
+                  required
+                  />
+                  <i class="bi bi-eye-slash"></i>
+              </div>
+              <br />
+              <button type="submit" href="/">Ingresar</button>
+              </div>
               </div>
             </form>
+
           </div>
         </div>
+        
 
   );
 }
 
-export default Login;
+export default AdminLogin;

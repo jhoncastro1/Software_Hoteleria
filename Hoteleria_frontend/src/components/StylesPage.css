@@ -67,10 +67,12 @@
     color: rgba(66, 66, 66, 0.7);
 }
 
+
 /*Color de fuente y tamaño del contenido de los cuadro componentes de checkIn*/
 .font_size_letter_one{
     font-size: calc(0.9em);
     color: rgba(66, 66, 66, 0.7);
+
 }
 
 /*Tamaño de los iconos SVG*/
@@ -175,8 +177,8 @@ a{
 
 /*Componente cuadro color beige/naranja*/
 .bg_color_two{
-    width: 260px;
-    height: 310px;
+    width: 80%;
+    height: 50%;
     background-color: #F2EBDC;
     border-radius: 20px;
 }
