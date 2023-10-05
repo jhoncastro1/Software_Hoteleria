@@ -31,7 +31,7 @@ function AdminLogin() {
 
             <h4 class="text-white mb-4">Bienvenidos de nuevo a tu</h4>
             <h1 class="text-white mb-4">SOFTWARE DE HOTELERÍA</h1>
-            <h4 class="text-white">Instructor SENA</h4>
+            <h4 class="text-white">Administrador SENA</h4>
             
           </div>
 
@@ -41,14 +41,13 @@ function AdminLogin() {
             <form onSubmit={handleSubmit}>
               <div className=''>
                 <div className="text-center">
+
                   <img src={Senalogo} width="30px" height="30px"></img>
                   <p>Regional tolima</p>
-                  <br />
-                  
-                  <br />
+                  <br /><br />
                   <h2>Iniciar sesión</h2>
-
-                  <p>Inicia sesion con tu cuenta asignada por el instructor de proyecto</p>
+                  <p>Inicia sesión con tu cuenta de Administrador</p>
+                  <p></p>
                   <br />
                 </div>
                 <div className='col-12 px-5'>
@@ -65,23 +64,23 @@ function AdminLogin() {
                     <div className='col-12' >
                       <label>Contraseña:</label>
 
-                      <input className="border-top-0 border-end-0 border-start-0" 
-                      type="password"
-                      value={password}
-                      onChange={handlePasswordChange}
-                      required
-                      />
-                      <i class="bi bi-eye-slash"></i>
-                    </div>
-                    <br />
-                    <div className='col-12 d-flex justify-content-center text-center'>
-                      <button className='col-8' type="submit" href="/">Ingresar</button>
-                    </div>
-                </div>
+                <input className="border-top-0 border-end-0 border-start-0   class='bi bi-eye-slash'" 
+                  type="password"
+                  value={password}
+                  onChange={handlePasswordChange}
+                  required
+                  />
+                  <i class="bi bi-eye-slash"></i>
+              </div>
+              <br />
+              <button type="submit" href="/">Ingresar</button>
+              </div>
               </div>
             </form>
+
           </div>
         </div>
+        
 
   );
 }

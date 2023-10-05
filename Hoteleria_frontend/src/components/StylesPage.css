@@ -232,3 +232,12 @@ a{
     bottom: 0;
     z-index: 1; /* Coloca el subrayado detrás de la palabra */
   }
+  .contenedor-one{
+    height: 75%;
+    align-items: center;
+  }
+  .contener-two{
+    height: 90%;
+    align-items: center;
+  }
+  
