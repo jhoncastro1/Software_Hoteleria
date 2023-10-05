@@ -33,6 +33,4 @@ public class RecordReservationDTO {
     @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate date;
     private String remarks;
-    private String nameStudent;
-
 }

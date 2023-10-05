@@ -43,4 +43,8 @@ public class Check_inController {
         return this.checkInService.findCheckIn(checkInId);
     }
 
+    @GetMapping("/custom")
+    public List<IForm> customFind(){
+        return this.checkInService.customFind();
+    }
 }

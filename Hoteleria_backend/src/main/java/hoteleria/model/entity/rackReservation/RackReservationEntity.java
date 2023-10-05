@@ -29,8 +29,4 @@ public class RackReservationEntity {
 
     @Column(name = "day")
     private Integer day;
-
-    @Column(name = "name_student")
-    private String nameStudent;
-
 }

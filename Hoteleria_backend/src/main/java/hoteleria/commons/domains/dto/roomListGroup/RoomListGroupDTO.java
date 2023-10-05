@@ -24,6 +24,4 @@ public class RoomListGroupDTO {
     private Integer countRoom;
     private String typeRoom;
     private String noRoom;
-    private String nameStudent;
-
 }

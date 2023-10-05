@@ -1,6 +1,5 @@
 package hoteleria.commons.domains.dto.rackReservation;
 
-import jakarta.persistence.Column;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -16,6 +15,4 @@ public class RackReservationDTO {
     private Integer noRooms;
     private Integer month;
     private Integer day;
-    private String nameStudent;
-
 }
