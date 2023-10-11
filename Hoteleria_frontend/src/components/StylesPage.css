@@ -177,8 +177,8 @@ a{
 
 /*Componente cuadro color beige/naranja*/
 .bg_color_two{
-    width: 80%;
-    height: 50%;
+    width: 260px;
+    height: 280px;
     background-color: #F2EBDC;
     border-radius: 20px;
 }

@@ -37,7 +37,7 @@ function Login() {
 
 
 
-          <div className="px-5 login col-6 text-black d-flex align-items-center justify-content-center flex-column">
+          <div className="pp-5 login col-6 text-black d-flex align-items-center justify-content-center flex-column">
             <form onSubmit={handleSubmit}>
               <div className=''>
                 <div className="text-center">
@@ -49,7 +49,7 @@ function Login() {
                   <p> por el instructor de proyecto</p>
                   <br />
                 </div>
-                <div className='col-12 px-5'>
+                <div className='col-12 pp-5'>
                     <div className='col-12'>
                       <label className='text-start w-100'>Email:</label>
                       <div>

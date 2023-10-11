@@ -17,9 +17,7 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route
-            path="/"
-            element={
+          <Route path="/"element={
               <>
                 <Navbar_Home /> {/* Se muestra solo en la página de inicio */}
                 <Home />
