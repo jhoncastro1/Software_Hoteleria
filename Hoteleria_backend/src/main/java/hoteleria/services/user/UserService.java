@@ -2,6 +2,7 @@ package hoteleria.services.user;
 
 import hoteleria.commons.constans.response.IResponse;
 import hoteleria.commons.converter.user.UserConverter;
+import hoteleria.commons.domains.dto.check_In.IForm;
 import hoteleria.commons.domains.dto.user.UserDTO;
 import hoteleria.model.entity.check_in.Check_inEntity;
 import hoteleria.model.entity.user.UserEntity;
@@ -86,6 +87,19 @@ public class UserService {
             }
         }
         catch (Exception e){
+            return IResponse.INTERNAL_SERVER_ERROR;
+        }
+    }
+
+    public String serviceUser(UserDTO userDTO){
+        try {
+            Optional<UserEntity> find = this.iUserRepository.findByUserEmail(userDTO.getUserEmail());
+            if (find.isPresent()){
+                return IResponse.OPERATION_SUCCESS;
+            }else {
+                return IResponse.NOT_FOUND;
+            }
+        }catch (Exception e){
             return IResponse.INTERNAL_SERVER_ERROR;
         }
     }

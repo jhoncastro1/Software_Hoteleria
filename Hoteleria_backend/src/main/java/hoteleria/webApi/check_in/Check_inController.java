@@ -25,7 +25,8 @@ public class Check_inController {
 
     @PostMapping(ICheckInEndPoints.CHECK_IN_CREATE_URL)
     public String createCheckIn(@RequestBody Check_inEntity checkInEntity){
-        return this.checkInService.addCheckIn(checkInEntity);
+        System.out.println("prueba controlador");
+        return this.checkInService.createCheckIn(checkInEntity);
     }
 
     @DeleteMapping(ICheckInEndPoints.CHECK_IN_DELETE_URL)
