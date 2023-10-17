@@ -1,5 +1,6 @@
 package hoteleria.webApi.outletPass;
 
+import hoteleria.commons.constans.endPoints.front.IFrontHost;
 import hoteleria.commons.constans.endPoints.outletPass.IOutletPassEndPoints;
 import hoteleria.commons.constans.endPoints.recordReservations.IRecordReservationEndPoints;
 import hoteleria.commons.domains.dto.outletPass.OutletPassDTO;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(IOutletPassEndPoints.OUTLET_PASS_BASE_URL)
+@CrossOrigin(origins = IFrontHost.FRONT_URL)
 public class OutletPassController {
 
     @Autowired
