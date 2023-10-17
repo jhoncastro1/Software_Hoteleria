@@ -1,0 +1,31 @@
+.navbar-formatos {
+  border-radius: 15px;
+  background-color: #90A19D;
+  width: 95%;
+  margin: 10px;
+}
+
+.Seccion-Pass{
+  border: 1px solid;
+}
+
+.input-name{
+    border-bottom: 1px;
+}
+
+.container-Exit-pass{
+  padding: 20px;
+  
+}
+
+
+.form-control-nombre{
+  border-radius: 0;
+}
+
+.form-control-fecha{
+  border-top: 1px solid;
+}
+
+
+
