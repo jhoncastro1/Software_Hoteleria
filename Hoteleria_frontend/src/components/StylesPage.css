@@ -177,8 +177,8 @@ a{
 
 /*Componente cuadro color beige/naranja*/
 .bg_color_two{
-    width: 80%;
-    height: 50%;
+    width: 260px;
+    height: 280px;
     background-color: #F2EBDC;
     border-radius: 20px;
 }
@@ -274,10 +274,14 @@ a{
     bottom: 0;
     z-index: 1; /* Coloca el subrayado detrás de la palabra */
   }
+
+  /*Pocision cuadro main-page reservacion*/
   .contener-one{
     height: 75%;
     align-items: center;
   }
+
+  /*Pocision cuadro Check-in*/
   .contener-two{
     height: 90%;
     align-items: center;
