@@ -47,7 +47,7 @@ const Home_page = () => {
             </div>
           </div>
           
-          <div className='col-lg-12 col-xl-6 d-lg-flex'>
+          <div className='col-lg-12 col-xl-6 d-lg-flex '>
             <div className='col-lg-6'>
               <div className='col-lg-6 bg_color_three'>
                 <div className='p-4'>
