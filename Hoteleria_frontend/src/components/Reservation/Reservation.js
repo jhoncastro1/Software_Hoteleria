@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 function ReservationForm() {
-    const [formData, setFormData] = useState({
+   
+  const [formData, setFormData] = useState({
       reservation_id: '',
       reservation_date: '',
       check_in_date: '',

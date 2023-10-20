@@ -9,6 +9,8 @@ import hoteleria.services.OutletPass.OutletPassService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Random;
+
 @RestController
 @RequestMapping(IOutletPassEndPoints.OUTLET_PASS_BASE_URL)
 @CrossOrigin(origins = IFrontHost.FRONT_URL)
