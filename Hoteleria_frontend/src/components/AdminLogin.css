@@ -14,7 +14,6 @@ label {
   margin-top: 8px;
 }
 
-
 input[type="email"],input[type="password"] {
   width: 100%;
   padding: 10px;
@@ -22,6 +21,12 @@ input[type="email"],input[type="password"] {
 
 button {
   justify-content: center;
+  width: 100%;
+  background-color: #044040;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
   width: 60%;
   background-color: #044040;
   color: #fff;

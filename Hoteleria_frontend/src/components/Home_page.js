@@ -11,6 +11,8 @@ const Home_page = () => {
               Bienvenido a tu <div className='underline-up'><span className="palabra ">Software de hoteleria</span><div className="subrayado-two"></div></div> 
             </h1> 
           </div>
+          <div className='py-5'>
+            <h4 className='font_size'>Estamos aquí para ayudarte en cada paso de tu formación y crecimiento en la industria hotelera.</h4>
           <div className='room'>
             <div className='py-5'>
               <h4 className='font_size'>Estamos aquí para ayudarte en cada paso de tu formación y crecimiento en la industria hotelera.</h4>
@@ -49,6 +51,7 @@ const Home_page = () => {
             </div>
           </div>
           
+          <div className='col-lg-12 col-xl-6 d-lg-flex'>
           <div className='col-lg-12 col-xl-6 d-lg-flex '>
             <div className='col-lg-6'>
               <div className='col-lg-6 bg_color_three'>
@@ -63,7 +66,6 @@ const Home_page = () => {
                 
               </div>
               <div className='py-5'></div>
-              
               <div className='col-lg-6 bg_color'>
                 <div className='p-4'>
                   <div className='div_w_one'></div>
