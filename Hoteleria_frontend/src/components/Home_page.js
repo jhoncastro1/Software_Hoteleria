@@ -13,6 +13,10 @@ const Home_page = () => {
           </div>
           <div className='py-5'>
             <h4 className='font_size'>Estamos aquí para ayudarte en cada paso de tu formación y crecimiento en la industria hotelera.</h4>
+          <div className='room'>
+            <div className='py-5'>
+              <h4 className='font_size'>Estamos aquí para ayudarte en cada paso de tu formación y crecimiento en la industria hotelera.</h4>
+            </div>
           </div>
           <div className='py-5 col-12 d-flex justify-content-center '>
             <a className='py-5 my-5 col-5'>
@@ -48,6 +52,7 @@ const Home_page = () => {
           </div>
           
           <div className='col-lg-12 col-xl-6 d-lg-flex'>
+          <div className='col-lg-12 col-xl-6 d-lg-flex '>
             <div className='col-lg-6'>
               <div className='col-lg-6 bg_color_three'>
                 <div className='p-4'>
@@ -60,8 +65,7 @@ const Home_page = () => {
                 
                 
               </div>
-              
-              
+              <div className='py-5'></div>
               <div className='col-lg-6 bg_color'>
                 <div className='p-4'>
                   <div className='div_w_one'></div>
