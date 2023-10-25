@@ -18,10 +18,10 @@ import java.time.LocalDate;
 public class OutletPassDTO {
     private Integer idOutletPass;
     private String nameCustomer;
-    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate date;
     private Integer idAssignedRoom;
     private Integer guestsCount;
     private boolean keyRoom;
     private String cashierName;
+    private String cashier;
 }

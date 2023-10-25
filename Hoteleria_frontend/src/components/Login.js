@@ -19,59 +19,39 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
-    const userDTO = {
-      userEmail: email, // Suponiendo que 'email' es la variable que contiene el correo electrónico
-      userPassword: password, // Suponiendo que 'password' es la variable que contiene la contraseña
-    };
-  
-    console.log("Email:", userDTO.userEmail);
-    console.log("Contraseña:", userDTO.userPassword);
-  
-    fetch('http://localhost:8080/user/service', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(userDTO),
-    })
-      .then((response) => {
-        console.log('mensaje exitoso ' + response);
-      })
-      .then((data) => {
-        console.log('Mensaje de respuesta desde el backend:', data);
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
+    // Aquí puedes enviar los datos de inicio de sesión al servidor o realizar cualquier otra acción que desees.
+    console.log("Email:", email);
+    console.log("Contraseña:", password);
   };
 
   return (
         
         <div className="col-12 row">
-          <div className="software text-white col-6 min-vh-100 text-white d-flex align-items-center justify-content-center flex-column info">
-
+          
+          <div className="software text-white col-6 min-vh-100 text-white align-items-center justify-content-center flex-column info">
+            
             <h4 class="text-white mb-4">Bienvenidos de nuevo a tu</h4>
             <h1 class="text-white mb-4">SOFTWARE DE HOTELERÍA</h1>
-            <h4 class="text-white">Aprendiz del SENA</h4>
-            
+            <h4 class="text-white ">Aprendiz del SENA</h4>
+
           </div>
 
-
-
-          <div className="px-5 login col-6 text-black d-flex align-items-center justify-content-center flex-column">
+          <div className="pp-5 login col-6 text-black d-flex align-items-center justify-content-center flex-column">
             <form onSubmit={handleSubmit}>
               <div className=''>
                 <div className="text-center">
+
                   <img src={Senalogo} alt='LogoSena' width="50px" height="50px"></img>
                   <p>Regional tolima</p>
                   <br /><br />
                   <h2>Iniciar sesión</h2>
                   <p>Inicia sesión con tu cuenta asignada</p>
                   <p> por el instructor de proyecto</p>
+                  <p></p>
                   <br />
+
                 </div>
-                <div className='col-12 px-5'>
+                <div className='col-12 pp-5'>
                     <div className='col-12'>
                       <label className='text-start w-100'>Email:</label>
                       <div>
@@ -82,6 +62,7 @@ function Login() {
                           required/>
                       </div>
                     </div>
+                    
                     <div className='col-12' >
                       <label>Contraseña:</label>
 
@@ -94,9 +75,9 @@ function Login() {
                     </div>
                     <br />
                     <div className='col-12 d-flex justify-content-center text-center'>
-                      <button className='col-8' type="submit" href="/main">Ingresar</button>
+                      <button className='col-8' type="submit" href="/">Ingresar</button>
                     </div>
-                    <br /><br /><br />
+                    <br /><br />
                     <div className='text-center'  >
                       <p className='pie mt-5' >Proyecto de Hotelería</p>
                     </div>

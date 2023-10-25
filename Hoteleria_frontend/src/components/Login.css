@@ -14,7 +14,7 @@ label {
   margin-top: 8px;
   
 }
-.px-5{
+.pp-5{
   padding-left: calc(6vw) !important;
   padding-right: calc(6vw) !important;
 }
@@ -25,7 +25,7 @@ input[type="email"],input[type="password"] {
   
 }
 
-button {
+.button {
   justify-content: center;
   width: 60%;
   background-color: #044040;
@@ -38,14 +38,16 @@ button {
   border: #044040;
 }
 
-button:hover {
+.button:hover {
   background-color: #033131;
 }
 
 .software{
   color: #fff;
   text-align: center;
+  display: flex;
 }
+
 
 p{
   font-size: 65%;
@@ -61,3 +63,23 @@ p{
   background-color: #044040;
 }
 
+@media (max-width: 768px) {
+  .software {
+    display: none;
+    
+  }
+}
+
+@media (max-width: 768px){
+  .login{
+    width: 100%;
+    margin-top: 100px;
+    margin-left: 4%;
+  }
+  .form{
+    padding-top: 15px;
+  }
+  .pie{
+    padding-top: 15px;
+  }
+}
