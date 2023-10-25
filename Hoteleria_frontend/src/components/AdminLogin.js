@@ -40,8 +40,6 @@ function AdminLogin() {
             <form onSubmit={handleSubmit}>
               <div className=''>
                 <div className="text-center">
-
-                  <img src={Senalogo} width="30px" height="30px"></img>
                   <img src={Senalogo} width="50px" height="50px"></img>
                   <p>Regional tolima</p>
                   <br /><br />
@@ -65,7 +63,6 @@ function AdminLogin() {
                     <div className='col-12' >
                       <label>Contraseña:</label>
 
-                <input className="border-top-0 border-end-0 border-start-0   class='bi bi-eye-slash'" 
                 <input className="border-top-0 border-end-0 border-start-0 class='bi bi-eye-slash'" 
                   type="password"
                   value={password}
@@ -75,8 +72,6 @@ function AdminLogin() {
                   <i class="bi bi-eye-slash"></i>
               </div>
               <br />
-              <button type="submit" href="/">Ingresar</button>
-              </div>
               <div className='col-12 d-flex justify-content-center text-center' >
                 <button className='col-8' type="submit" href="/">Ingresar</button>
               </div>

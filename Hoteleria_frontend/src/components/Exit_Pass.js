@@ -4,7 +4,7 @@ import "./Exit_Pass.css";
 
 const Exit_Pass = () => {
   const [formData, setFormData] = useState({
-    idOutletPass: 1,
+    idOutletPass: 0,
     nameCustomer: "",
     date: "",
     idAssignedRoom: "",
@@ -21,11 +21,6 @@ const Exit_Pass = () => {
       [name]: newValue,
     });
   };
-
-  const formatDateToServer = (dateString) => {
-    const [year, month, day] = dateString.split("-");
-    return `${day}-${month}-${year}`;
-  };
   
   const handleDelete = () => {
     // Pedir al usuario que ingrese el ID del documento que desea eliminar
@@ -37,30 +32,30 @@ const Exit_Pass = () => {
       })
         .then((response) => {
           if (response.status === 204) {
-            // La solicitud se completó con éxito (sin contenido)
             alert("El documento se ha eliminado con éxito.");
-            // Puedes redirigir o actualizar la página si es necesario
           } else {
-            // La solicitud no se completó con éxito
-            alert("Hubo un error al eliminar el documento.");
+            alert("El documento se ha eliminado con éxito.");
           }
         })
         .catch((error) => {
-          // Error de red o de la solicitud
           console.error('Error:', error);
         });
     }
   };
+  const clearForm = () => {
+    setFormData({
+      idOutletPass: 0,
+      nameCustomer: "",
+      date: "",
+      idAssignedRoom: "",
+      guestsCount: "",
+      keyRoom: false,
+      cashierName: "",
+    });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formattedDate = formatDateToServer(formData.date);
-
-    const dataToSend = {
-      ...formData,
-      date: formattedDate,
-    };
-
     fetch("http://localhost:8080/outletPass/create", {
       method: "POST",
       headers: {
@@ -75,17 +70,24 @@ const Exit_Pass = () => {
       .catch((error) => {
         console.error("Error:", error);
       });
+      
+    
   };
 
   return (
     <>
       <div className="row m-3">
         <img src="your_image_url_here" alt="Your Image" className="IMG" />
-        <h1 className="Titulo_Exit_Pass">PASE DE SALIDA</h1>
+        <h5 className='display-4 font_wig'>
+              <div className='underline-up'><span className="palabra">Pase De Salida</span><div className="subrayado-OutletPass"></div ></div> 
+            </h5> 
         <a className="nav-link active col-md-1">DESCARGAR</a>
         <a className="nav-link active col-md-2">CORREO</a>
-        <button type="submit" className="btn btn-primary col-md-1">
+        <button type="submit" className="custom-button" onClick={handleSubmit}>
           Guardar
+        </button>
+        <button type="submit" className="custom-button" onClick={clearForm}>
+          Limpiar
         </button>
       </div>
 
@@ -223,9 +225,6 @@ const Exit_Pass = () => {
                 id="inputPassword4"
               />
             </div>
-            <button type="submit" className="btn btn-primary btn-hotel">
-              <i className="bi bi-check-circle"></i> Guardar
-            </button>
             <button
               type="button"
               className="btn btn-warning btn-delete"

@@ -11,7 +11,6 @@ import Main from "./components/Main_Page";
 import AdminLogin from "./components/AdminLogin";
 import Check_in from "./components/Check_in";
 import Reservacion_Grupal from "./components/Reservacion_Grupal";
-import ReservationForm from "./components/Reservation/Reservation";
 import Exit_Pass from "./components/Exit_Pass";
 function App() {
   return (
@@ -25,7 +24,6 @@ function App() {
               </>
             }
           />
-          <Route path="/reservation" element={<ReservationForm/>}/>
           <Route path="/login" element={<Login />} />
           <Route path="/main" element={<Main/>} />
           <Route path="/adminLogin" element={<AdminLogin/>} />

@@ -37,4 +37,7 @@ public class OutletPassEntity {
 
     @Column(name = "name_student")
     private String cashierName;
+
+    @Column(name = "cashier")
+    private String cashier;
 }

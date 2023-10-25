@@ -3,7 +3,6 @@ import "./Reservacion_Grupal.css";
 
 const Reservacion_Grupal = () => {
   return (
-
     <main> 
 
         <section className='col-lg-12 d-flex'>

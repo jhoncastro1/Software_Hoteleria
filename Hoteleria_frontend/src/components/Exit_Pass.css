@@ -55,5 +55,14 @@
   border-radius: 20px;
   border: 2px solid rgb(107, 0, 0);
 }
+.subrayado-OutletPass{
+  position: absolute;
+  width: 25%;
+  height: 25px; /* Puedes ajustar la altura según tus preferencias */
+  background-color: #FEB5CB; /* Color del subrayado */
+  bottom: 0;
+  z-index: 1;
+}
+
 
 

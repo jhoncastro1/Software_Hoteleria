@@ -19,31 +19,9 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
-    const userDTO = {
-      userEmail: email, // Suponiendo que 'email' es la variable que contiene el correo electrónico
-      userPassword: password, // Suponiendo que 'password' es la variable que contiene la contraseña
-    };
-  
-    console.log("Email:", userDTO.userEmail);
-    console.log("Contraseña:", userDTO.userPassword);
-  
-    fetch('http://localhost:8080/user/service', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(userDTO),
-    })
-      .then((response) => {
-        console.log('mensaje exitoso ' + response);
-      })
-      .then((data) => {
-        console.log('Mensaje de respuesta desde el backend:', data);
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
+    // Aquí puedes enviar los datos de inicio de sesión al servidor o realizar cualquier otra acción que desees.
+    console.log("Email:", email);
+    console.log("Contraseña:", password);
   };
 
   return (
@@ -97,7 +75,7 @@ function Login() {
                     </div>
                     <br />
                     <div className='col-12 d-flex justify-content-center text-center'>
-                      <button className='col-8' type="submit" href="/main">Ingresar</button>
+                      <button className='col-8' type="submit" href="/">Ingresar</button>
                     </div>
                     <br /><br />
                     <div className='text-center'  >
