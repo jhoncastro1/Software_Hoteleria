@@ -40,7 +40,6 @@ function AdminLogin() {
             <form onSubmit={handleSubmit}>
               <div className=''>
                 <div className="text-center">
-
                   <img src={Senalogo} width="50px" height="50px"></img>
                   <p>Regional tolima</p>
                   <br /><br />

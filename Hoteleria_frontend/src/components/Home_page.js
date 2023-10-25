@@ -63,7 +63,6 @@ const Home_page = () => {
                 
               </div>
               <div className='py-5'></div>
-              
               <div className='col-lg-6 bg_color'>
                 <div className='p-4'>
                   <div className='div_w_one'></div>

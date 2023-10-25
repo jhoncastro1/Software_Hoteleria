@@ -77,7 +77,6 @@ const Check_in = () => {
                     <h3 className='font_size font_color px-5 py-3'>Reserva grupal</h3>
                         <p className='font_size_letter_one px-5 py-2'>Se diligencia únicamente si es una reservación grupal</p>
                       <div className='text-center'>
-
                         <div className='text-center px-4 py-4'>
                           <a className='div_w_one font_size font_color_one px-5' href="/login" role='button'>Formatos</a>
                         </div>
@@ -91,7 +90,6 @@ const Check_in = () => {
                     <h3 className='font_size font_color px-5'>Facturación</h3>
                         <p className='font_size_letter_one px-5'>la generación de una factura o cuenta para el huésped en el momento en que realiza el registro de entrada en el hotel</p>
                       <div className='text-center'>
-                    
                         <div className='text-center px-5 py-3'>
                           <a className='div_w_three font_size font_color_one px-5' href="/login" role='button'>Formatos</a>
                         </div>
