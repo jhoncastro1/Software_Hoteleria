@@ -38,7 +38,6 @@
 /*Color de fuente y tamaño del texto del contenido en los componentes de cuadro en la pagina de inicio*/
 .font_size_three{
     font-size: calc(1em);
-
     color: rgba(66, 66, 66, 0.75);
 
 }
@@ -286,4 +285,48 @@ a{
     height: 90%;
     align-items: center;
   }
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*CheckOut*/
 
+ /*Subrayado del titutlo checkout*/
+ .subrayado-three {
+    position: absolute;
+    width: 60%;
+    height: 36px; /* Puedes ajustar la altura según tus preferencias */
+    background-color:  rgba(242, 206, 162, 0.6); /* Color del subrayado */
+    bottom: 0;
+    z-index: 1; /* Coloca el subrayado detrás de la palabra */
+  }
+
+  /* Componente "Todos los formatos" Style checkOut*/
+.div_t_one{
+    width: calc(250px);
+    height: calc(55px);
+    border-radius: 30px;
+    background-color: rgba(166, 116, 73, 1);
+}
+
+.bg_color_seven{
+    width: 370px;
+    height: 340px;
+    top: 156px;
+    left: 730px;
+    background-color: rgba(242, 235, 220, 1);
+    border-radius: 20px;
+}
+
+/*Componente IR del home_Page color beige*/
+.div_w_six{
+    width: 210px;
+    height: 45px;
+    border-radius: 20px;
+    background-color: rgba(115, 76, 41, 1);
+}
+
+/*Color de fuente y tamaño del texto del contenido en los componentes de cuadro en la pagina de inicio*/
+.font_size_six{
+    font-size: calc(1.2em);
+    color: rgba(66, 66, 66, 0.75);
+
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
