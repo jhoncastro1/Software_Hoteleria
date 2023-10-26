@@ -20,7 +20,7 @@ public class OutletPassService {
 
     public String createOutletPass(OutletPassEntity outletPassEntity){
         try {
-            Optional<OutletPassEntity> find = iOutletPassRepository.findById(outletPassEntity.getIdOutletPass());
+            Optional<OutletPassEntity> find = iOutletPassRepository.findByNameCustomer(outletPassEntity.getNameCustomer());
             if (!find.isPresent()){
                 this.iOutletPassRepository.save(outletPassEntity);
                 return IResponse.CREATE_SUCCESS;

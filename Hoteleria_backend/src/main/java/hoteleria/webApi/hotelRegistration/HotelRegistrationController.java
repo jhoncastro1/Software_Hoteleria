@@ -1,5 +1,6 @@
 package hoteleria.webApi.hotelRegistration;
 
+import hoteleria.commons.constans.endPoints.front.IFrontHost;
 import hoteleria.commons.constans.endPoints.hotelRegistration.IHotelRegistrationEndPoints;
 import hoteleria.commons.domains.dto.hotelRegistration.HotelRegistrationDTO;
 import hoteleria.model.entity.hotelRegistration.HotelRegistrationEntity;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(IHotelRegistrationEndPoints.HOTEL_REGISTRATION_BASE_URL)
+@CrossOrigin(origins = IFrontHost.FRONT_URL)
 public class HotelRegistrationController {
 
     @Autowired

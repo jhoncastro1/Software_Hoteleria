@@ -1,5 +1,6 @@
 package hoteleria.webApi.recordReservation;
 
+import hoteleria.commons.constans.endPoints.front.IFrontHost;
 import hoteleria.commons.constans.endPoints.recordReservations.IRecordReservationEndPoints;
 import hoteleria.commons.domains.dto.recordReservation.RecordReservationDTO;
 import hoteleria.model.entity.recordReservation.RecordReservationEntity;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(IRecordReservationEndPoints.BASE_RECORD_RESERVATIONS_URL)
+@CrossOrigin(origins = IFrontHost.FRONT_URL)
 public class RecordReservationController {
     @Autowired
     private RecordReservationService recordReservationService;

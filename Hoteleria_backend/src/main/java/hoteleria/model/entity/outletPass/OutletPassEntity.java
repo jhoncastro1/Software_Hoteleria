@@ -18,14 +18,12 @@ public class OutletPassEntity {
 
     @Id
     @Column(name = "id_outlet_pass")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idOutletPass;
 
     @Column(name = "name_customer")
     private String nameCustomer;
 
     @Column(name = "date")
-    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate date;
 
     @Column(name = "id_assigned_room")
@@ -37,6 +35,9 @@ public class OutletPassEntity {
     @Column(name = "key_room")
     private boolean keyRoom;
 
-    @Column(name = "cashier_name")
+    @Column(name = "name_student")
     private String cashierName;
+
+    @Column(name = "cashier")
+    private String cashier;
 }

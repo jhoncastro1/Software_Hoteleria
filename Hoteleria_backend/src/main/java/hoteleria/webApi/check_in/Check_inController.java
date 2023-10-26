@@ -1,6 +1,7 @@
 package hoteleria.webApi.check_in;
 
 import hoteleria.commons.constans.endPoints.check_in.ICheckInEndPoints;
+import hoteleria.commons.constans.endPoints.front.IFrontHost;
 import hoteleria.commons.domains.dto.check_In.Check_InDTO;
 import hoteleria.commons.domains.dto.check_In.IForm;
 import hoteleria.model.entity.check_in.Check_inEntity;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(ICheckInEndPoints.CHECK_IN_BASE_URL)
+@CrossOrigin(origins = IFrontHost.FRONT_URL)
 public class Check_inController {
 
     @Autowired
@@ -25,7 +27,8 @@ public class Check_inController {
 
     @PostMapping(ICheckInEndPoints.CHECK_IN_CREATE_URL)
     public String createCheckIn(@RequestBody Check_inEntity checkInEntity){
-        return this.checkInService.addCheckIn(checkInEntity);
+        System.out.println("prueba controlador");
+        return this.checkInService.createCheckIn(checkInEntity);
     }
 
     @DeleteMapping(ICheckInEndPoints.CHECK_IN_DELETE_URL)

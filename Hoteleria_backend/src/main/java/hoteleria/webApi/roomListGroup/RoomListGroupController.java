@@ -1,5 +1,6 @@
 package hoteleria.webApi.roomListGroup;
 
+import hoteleria.commons.constans.endPoints.front.IFrontHost;
 import hoteleria.commons.constans.endPoints.roomListGroup.IRoomListGroupEndPoints;
 import hoteleria.commons.domains.dto.roomListGroup.RoomListGroupDTO;
 import hoteleria.model.entity.roomListGroup.RoomListGroupEntity;
@@ -10,7 +11,9 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(IRoomListGroupEndPoints.ROOM_LIST_GROUP_BASE_URL)
+@CrossOrigin(origins = IFrontHost.FRONT_URL)
 public class RoomListGroupController {
+
     @Autowired
     private RoomListGroupService roomListGroupService;
 

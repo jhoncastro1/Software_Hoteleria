@@ -30,8 +30,8 @@ public class Check_inEntity {
     private LocalTime checkInTime;
 
     @Column(name = "check_in_date")
-    @JsonFormat(pattern = "dd-MM-yyyy")
-    private LocalDate checkInDate;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate date;
 
     @Column(name = "guests_count")
     private Integer guestsCounts;
