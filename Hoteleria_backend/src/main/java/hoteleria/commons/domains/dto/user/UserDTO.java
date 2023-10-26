@@ -17,6 +17,6 @@ import java.io.Serializable;
 @ToString
 public class UserDTO implements Serializable {
     private Integer userId;
-    private Integer userStatus;
+    private String userEmail;
     private String userPassword;
 }

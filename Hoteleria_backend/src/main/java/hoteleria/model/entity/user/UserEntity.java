@@ -2,14 +2,13 @@ package hoteleria.model.entity.user;
 
 import hoteleria.commons.constans.tables.ITables;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Getter
 @Setter
 @ToString
 @Entity
+@Data
 @Table(name = ITables.TABLE_USER)
 public class UserEntity {
 
@@ -18,12 +17,10 @@ public class UserEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer userId;
 
-    @Column(name = "user_status")
-    private Integer userStatus;
+    @Column(name = "name_email")
+    private String userEmail;
 
-    @Column(name = "user_password")
+    @Column(name = "password")
     private String userPassword;
-
-
 
 }

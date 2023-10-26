@@ -9,9 +9,11 @@ import Login from "./components/Login";
 import NavbarHome from "./components/Navbar_Home";
 import Main from "./components/Main_Page";
 import AdminLogin from "./components/AdminLogin";
+
 import CheckIn from "./components/Check_in";
 import ReservacionGrupal from "./components/Reservacion_Grupal";
 import CheckOut from "./components/Check-out";
+import ExitPass from "./components/Exit_Pass";
 
 function App() {
   return (
@@ -30,7 +32,9 @@ function App() {
           <Route path="/adminLogin" element={<AdminLogin/>} />
           <Route path="/checkIn" element={<CheckIn/>}/>
           <Route path="/reservacionGrupal" element={<ReservacionGrupal/>}/>
-         <Route path="/checkOut" element={<CheckOut/>}/>
+          <Route path="/checkOut" element={<CheckOut/>}/>
+          <Route path="/exitPass" element={<ExitPass/>}/>
+
         </Routes>
       </div>
     </Router>

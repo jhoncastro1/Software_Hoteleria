@@ -8,4 +8,5 @@ public interface IUserEndPoints {
     String USER_GET_URL = "/getUser";
     String USER_UPDATE_URL = "/update";
 
+    String USER_SERVICE = "/service";
 }

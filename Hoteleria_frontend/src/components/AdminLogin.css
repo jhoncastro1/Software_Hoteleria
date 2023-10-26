@@ -1,7 +1,8 @@
 
 form {  
     background-color: #ffffff;
-
+    width: 100%;
+    align-items: center;
   }
 
 h2 {
@@ -13,6 +14,7 @@ label {
   margin-top: 8px;
 }
 
+
 input[type="email"],input[type="password"] {
   width: 100%;
   padding: 10px;
@@ -20,12 +22,15 @@ input[type="email"],input[type="password"] {
 
 button {
   justify-content: center;
-  width: 100%;
+  width: 60%;
   background-color: #044040;
   color: #fff;
-  padding: 10px;
+  padding: 8px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin: 10px;
+  border-radius: 60px ;
+  border: #044040;
 }
 
 button:hover {
@@ -35,6 +40,7 @@ button:hover {
 .software{
   color: #fff;
   text-align: center;
+  display: flex;
 }
 
 p{
@@ -43,9 +49,31 @@ p{
   color: #424242;
 }
 
+.pie{
+  padding-top: 10%;
+}
 
 .info
 {
   background-color: #044040;
 }
 
+@media (max-width: 768px) {
+  .software {
+    display: none;
+  }
+}
+
+@media (max-width: 768px){
+  .login{
+    width: 100%;
+    margin-top: 100px;
+    margin-left: 4%;
+  }
+  .form{
+    padding-top: 15px;
+  }
+  .pie{
+    padding-top: 15px;
+  }
+}

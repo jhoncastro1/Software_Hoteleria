@@ -1,5 +1,6 @@
 package hoteleria.webApi.rackReservation;
 
+import hoteleria.commons.constans.endPoints.front.IFrontHost;
 import hoteleria.commons.constans.endPoints.rackReservation.IRackReservationEndPoints;
 import hoteleria.commons.domains.dto.rackReservation.RackReservationDTO;
 import hoteleria.model.entity.rackReservation.RackReservationEntity;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(IRackReservationEndPoints.RACK_RESERVATION_BASE_URL)
+@CrossOrigin(origins = IFrontHost.FRONT_URL)
 public class RackReservationController {
 
     @Autowired

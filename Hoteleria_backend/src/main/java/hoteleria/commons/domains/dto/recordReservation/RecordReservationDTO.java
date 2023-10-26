@@ -18,19 +18,15 @@ import java.time.LocalDate;
 public class RecordReservationDTO {
     private Integer idRecord;
     private String fullName;
-    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate arrivalDate;
-    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate departureDate;
     private String typeRoom;
     private Integer guestsCount;
     private double deposit;
-    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate deadlineDate;
     private double rate;
     private Integer receiptNumber;
     private String nameEmploye;
-    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate date;
     private String remarks;
 }

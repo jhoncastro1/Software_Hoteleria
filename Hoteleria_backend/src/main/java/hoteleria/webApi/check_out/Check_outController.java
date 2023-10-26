@@ -1,6 +1,7 @@
 package hoteleria.webApi.check_out;
 
 import hoteleria.commons.constans.endPoints.check_out.ICheckOutEndPoints;
+import hoteleria.commons.constans.endPoints.front.IFrontHost;
 import hoteleria.commons.domains.dto.check_Out.Check_OutDTO;
 import hoteleria.model.entity.check_out.Check_outEntity;
 import hoteleria.services.check_out.Check_outService;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(ICheckOutEndPoints.CHECK_OUT_BASE_URL)
+@CrossOrigin(origins = IFrontHost.FRONT_URL)
 public class Check_outController {
 
     @Autowired

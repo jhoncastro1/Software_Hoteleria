@@ -1,5 +1,6 @@
 package hoteleria.webApi.reservation;
 
+import hoteleria.commons.constans.endPoints.front.IFrontHost;
 import hoteleria.commons.constans.endPoints.reservation.IReservationEndPoints;
 import hoteleria.commons.domains.dto.reservation.ReservationDTO;
 import hoteleria.model.entity.reservation.Reservation_Entity;
@@ -7,6 +8,7 @@ import hoteleria.services.reservation.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = IFrontHost.FRONT_URL)
 @RestController
 @RequestMapping(IReservationEndPoints.RESERVATION_BASE_URL)
 public class ReservationController {
