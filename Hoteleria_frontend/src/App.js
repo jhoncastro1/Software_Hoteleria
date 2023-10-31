@@ -12,8 +12,9 @@ import AdminLogin from "./components/AdminLogin";
 
 import CheckIn from "./components/Check_in";
 import ReservacionGrupal from "./components/Reservacion_Grupal";
-import CheckOut from "./components/Check-out";
+import CheckOut from "./components/Check_Out";
 import ExitPass from "./components/Exit_Pass";
+import PageAdmin from "./components/Page_Admin";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/reservacionGrupal" element={<ReservacionGrupal/>}/>
           <Route path="/checkOut" element={<CheckOut/>}/>
           <Route path="/exitPass" element={<ExitPass/>}/>
+          <Route path="/PageAdmin" element={<PageAdmin/>} />
 
         </Routes>
       </div>

@@ -67,8 +67,7 @@ const CheckOut = () => {
             <div className='col-lg-8 d-flex justify-content-end'>
               <div className='col-lg-8 align-items-end py-5 bg_color_seven contener-two '>
                   <h3 className=' font_color-f py-4 px-5'>Facturacion</h3>
-                      <p className='font_size_six px-5'>Caja revisar el cargo de consumos de cada habitación</p>
-                    
+                      <p className='font_size_six px-5'><span class="subrayado-negrilla">Caja</span> revisar el cargo de consumos de cada habitación</p>
                         <div className='text-center py-5 px-5'>
                           <a className='div_w_six font_size font_color_one px-5' href="/login" role='button'>Formatos</a>
                         </div>
