@@ -42,7 +42,7 @@ const Page_Admin = () => {
             <div className='col-xl-7'>
                 <div className='col-lg-8 justify-content-start py-4'>
                     <div className='col-lg-8 align-items-end py-5 bg_color_seven contener-two '>
-                        <h3 className=' font_color px-5 py-3'>Observar</h3>
+                        <h3 className=' font_color px-5 py-4'>Observar</h3>
                             <p className='font_size_six px-5'>La evaluación del desempeño estudiantil se lleva a cabo mediante la revisión de los archivos producidos en la plataforma</p>
                     </div>
                 </div>
