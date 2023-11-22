@@ -288,6 +288,40 @@ a{
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*CheckOut*/
 
+ /*Boton fijo de exit pass*/
+ .fixed-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #90A19D;
+  height: 64px;
+  width: 64px;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo base para el contenedor del icono */
+.save-icon {
+    width: 30px;
+    height: 30px;
+    right: 46px;
+    bottom: 48px;
+    position:  fixed;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Estilo para el ícono de disco */
+  .save-icon::before {
+    content: '\1F4BE'; /* Código Unicode para el ícono de disco (puedes cambiarlo según tus necesidades) */
+    font-size: 22px;
+  }
+
  /*Subrayado del titutlo checkout*/
  .subrayado-three {
     position: absolute;
