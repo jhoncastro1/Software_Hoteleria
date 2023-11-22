@@ -82,12 +82,6 @@ const Exit_Pass = () => {
             </h5> 
         <a className="nav-link active col-md-1">DESCARGAR</a>
         <a className="nav-link active col-md-2">CORREO</a>
-        <button type="submit" className="custom-button" onClick={handleSubmit}>
-          Guardar
-        </button>
-        <button type="submit" className="custom-button" onClick={clearForm}>
-          Limpiar
-        </button>
       </div>
 
       <nav className="navbar navbar-formatos navbar-expand-lg justify-content-center mx-auto p-2">
@@ -231,8 +225,12 @@ const Exit_Pass = () => {
             >
               <i className="bi bi-trash"></i> Borrar
             </button>
+            <button className="fixed-button" onClick={handleSubmit}>
+        <div className="save-icon"></div>
+      </button>
           </form>
         </div>
+        
       </section>
     </>
   );
