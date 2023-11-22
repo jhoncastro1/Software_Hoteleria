@@ -12,6 +12,10 @@ import AdminLogin from "./components/AdminLogin";
 import Check_in from "./components/Check_in";
 import Reservacion_Grupal from "./components/Reservacion_Grupal";
 import Exit_Pass from "./components/Exit_Pass";
+import Register_Reservation from "./components/Register_Reservation";
+import Register_Check_in from "./components/Register_Check_in";
+import Register_Check_out from "./components/Register_Ckeck_out";
+
 function App() {
   return (
     <Router>
@@ -32,6 +36,9 @@ function App() {
           <Route path="/checkIn" element={<Check_in/>}/>
           <Route path="/reservacionGrupal" element={<Reservacion_Grupal/>}/>
           <Route path="/exitPass" element={<Exit_Pass/>}/>
+          <Route path="/registroReservacion" element={<Register_Reservation/>}/>
+          <Route path="/registroCheckIn" element={<Register_Check_in/>}/>
+          <Route path="/registroCheckOut" element={<Register_Check_out/>}/>
         </Routes>
       </div>
     </Router>

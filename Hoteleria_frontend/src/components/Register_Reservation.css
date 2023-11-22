@@ -1,0 +1,55 @@
+.navbar-registros{
+ border-radius: 15px;
+ background-color: #ffffff;
+ width: 95%;
+ margin: 10px;
+}
+
+.nav-search{
+    width: 20px;
+}
+.tabla-reservaciones{
+  border: 5px;
+}
+
+.btn-navbar-register{
+  background-color: #ffffff;
+}
+
+.dropdown-registros{
+  margin: 10px;
+}
+
+.fila-reservacion{
+  margin: 10%;
+}
+.tabla-registro-reservacion{
+  margin: 10%;
+  border-radius: 30px;
+  background-color: #a78888;
+}
+
+.navbar-toggler{
+  background-color: #ffffff;
+}
+
+.tabla-registro-reservacion{
+  margin: 10%;
+  border-radius: 30px;
+  background-color: #a78888;
+}
+
+.boton-registro{
+  padding-left: 40px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.tabla-registro-reservacion{
+  border-top-width: 2px;
+}
+
+tbody{
+  border-top-width: 4px;
+}
+
