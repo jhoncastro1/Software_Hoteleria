@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(IOutletPassEndPoints.OUTLET_PASS_BASE_URL)
+@CrossOrigin(origins = "http://localhost:3000")
 public class OutletPassController {
 
     @Autowired
