@@ -31,12 +31,9 @@ public class Check_inService {
 
     public String createCheckIn(Check_inEntity checkInEntity){
         try{
-            System.out.println("prueba servicio" + checkInEntity.getCheckInId());
             Optional<Check_inEntity> find = this.iCheckInRepository.findByCheckInId(checkInEntity.getCheckInId());
             if(!find.isPresent()){
-                System.out.println("prueba condicion");
                 this.iCheckInRepository.save(checkInEntity);
-                System.out.println("prueba se guardo");
                 return IResponse.OPERATION_SUCCESS;
             }
             else {

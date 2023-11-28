@@ -64,6 +64,7 @@ const Exit_Pass = () => {
     })
       .then((response) => response.json())
       .then((data) => {
+        alert("El documento se guardo con exito")
         console.log("Response message from the backend:", data);
       })
       .catch((error) => {

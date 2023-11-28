@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import NavBar from './NavBar';
 
 const Home_page = () => {
   return (
     <main>
+      <div className='container'>
+      <NavBar/>
       <section className='d-xl-flex align-items-center col-xl-12'>
         <div className='col-sm-12 col-lg-6 room'>
         <div>
@@ -144,6 +147,7 @@ const Home_page = () => {
           
 
       </section>
+      </div>
     </main>
     
   )
