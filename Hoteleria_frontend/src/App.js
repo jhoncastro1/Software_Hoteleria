@@ -17,11 +17,13 @@ import CheckOut from "./components/Check_Out";
 import ExitPass from "./components/Exit_Pass";
 import PageAdmin from "./components/Page_Admin";
 import Home_page from "./components/Home_page";
+import HotelRegistration from "./components/HotelRegistration";
 
 function App() {
   const jwtToken = localStorage.getItem('jwtToken');
   console.log(jwtToken);
   let role = "";
+
 
   function isTokenExpired(jwtToken) {
     if (!jwtToken) {
@@ -33,7 +35,7 @@ function App() {
       const tokenPayload = JSON.parse(atob(arrayToken[1]));
       role =
         tokenPayload[
-          "http://localhost:8080/publico/authenticate"
+          "http://localhost:8080/mensaje"
         ];
       return Math.floor(new Date().getTime() / 1000) >= tokenPayload?.sub;
     } catch (error) {
@@ -75,7 +77,7 @@ const ProtectedRoute = ({ element, path, ...props }) => {
     // Check if the user has the 'Admin' role before rendering the element
     (role === 'Admin') ? element : <Home_page to="/homePage" /> 
   ) : (
-    <Home_page to="/homePAge" /> // Redirect to login if not authenticated
+    <Home_page to="/homePage" /> // Redirect to login if not authenticated
   );
 };
 
@@ -88,6 +90,7 @@ const ProtectedRoute = ({ element, path, ...props }) => {
         <Route path='/login' element={<Login />} />
         <Route path="/adminLogin" element={<AdminLogin/>} />
         <Route path="/main" element={<Main/>} />
+        <Route path="/hotelRegistration" element={<HotelRegistration/>}/>
         {/* Default route with the sidebar and navbar */}
         <Route
           path='/*'

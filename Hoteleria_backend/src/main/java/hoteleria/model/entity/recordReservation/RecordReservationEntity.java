@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+
 import java.time.LocalDate;
 
 @Getter
@@ -26,11 +27,18 @@ public class RecordReservationEntity {
     private String fullName;
 
     @Column(name = "arrival_date")
-    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate arrivalDate;
 
+    @Column(name = "direction")
+    private String direction;
+
+    @Column(name = "phone")
+    private String phone;
+
+    @Column(name = "reservation")
+    private Integer reservation;
+
     @Column(name = "departure_date")
-    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate departureDate;
 
     @Column(name = "type_room")
@@ -43,7 +51,6 @@ public class RecordReservationEntity {
     private double deposit;
 
     @Column(name = "deadline_date")
-    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate deadlineDate;
 
     @Column(name = "rate")
@@ -56,7 +63,6 @@ public class RecordReservationEntity {
     private String nameEmploye;
 
     @Column(name = "date")
-    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate date;
 
     @Column(name = "remarks")

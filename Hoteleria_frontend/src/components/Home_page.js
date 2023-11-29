@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
+import Navbar_Home from './Navbar_Home';
 
 const Home_page = () => {
   return (
     <main>
       <div className='container'>
-      <NavBar/>
+      <Navbar_Home/>
       <section className='d-xl-flex align-items-center col-xl-12'>
         <div className='col-sm-12 col-lg-6 room'>
         <div>

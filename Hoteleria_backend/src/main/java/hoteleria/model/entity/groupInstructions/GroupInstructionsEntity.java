@@ -1,11 +1,10 @@
-package hoteleria.model.entity.goupInstructions;
+package hoteleria.model.entity.groupInstructions;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import hoteleria.commons.constans.tables.ITables;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.sql.Date;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 

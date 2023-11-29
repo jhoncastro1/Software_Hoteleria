@@ -1,4 +1,5 @@
 import React, {useState } from 'react';
+import NavbarForm from './NavBarForm';
 const CustomerList = () =>{
     
 
@@ -12,45 +13,9 @@ const CustomerList = () =>{
           <a className="nav-link active col-md-1">DESCARGAR</a>
           <a className="nav-link active col-md-2">CORREO</a>
         </div>
-  
-        <nav className="navbar navbar-formatos navbar-expand-lg justify-content-center mx-auto p-2">
-          <div className="container-fluid">
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              className="collapse navbar-collapse justify-content-start"
-              id="navbarNav"
-            >
-              <ul className="navbar-nav fw-bold">
-                <li className="nav-item">
-                  <a className="nav-link active text-white">Reservacion</a>
-                </li>
-              </ul>
-            </div>
-            <div
-              className="collapse navbar-collapse justify-content-end"
-              id="navbarNav"
-            >
-              <ul className="navbar-nav fw-bold">
-                <li className="nav-item">
-                  <a className="nav-link active text-white" href="#">
-                    View Other Formats
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-  
+
+        <NavbarForm></NavbarForm>
+
         <hr className="border border-dark" />
   <div className="d-flex align-items-center justify-content-center">
 

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Exit_Pass.css";
+import NavBarForm from './NavBarForm';
+import Swal from "sweetalert2";
 
 const Exit_Pass = () => {
   const [formData, setFormData] = useState({
@@ -20,58 +22,49 @@ const Exit_Pass = () => {
       [name]: newValue,
     });
   };
-  
-  const handleDelete = () => {
-    // Pedir al usuario que ingrese el ID del documento que desea eliminar
-    const idToDelete = window.prompt("Ingresa el ID del documento que deseas eliminar:");
-  
-    if (idToDelete) { // Comprueba si el usuario ingresó un valor
-      fetch(`http://localhost:8080/outletPass/delete/${idToDelete}`, {
-        method: "DELETE",
-      })
-        .then((response) => {
-          if (response.status === 204) {
-            alert("El documento se ha eliminado con éxito.");
-          } else {
-            alert("El documento se ha eliminado con éxito.");
-          }
-        })
-        .catch((error) => {
-          console.error('Error:', error);
-        });
-    }
-  };
-  const clearForm = () => {
-    setFormData({
-      idOutletPass: 0,
-      nameCustomer: "",
-      date: "",
-      idAssignedRoom: "",
-      guestsCount: "",
-      keyRoom: false,
-      cashierName: "",
-    });
-  };
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    fetch("http://localhost:8080/outletPass/create", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        alert("El documento se guardo con exito")
-        console.log("Response message from the backend:", data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
+  
+    try {
+      const response = await fetch("http://localhost:8080/outletPass/create", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
-      
-    
+  
+      if (!response.ok) {
+        // Manejar casos donde la respuesta no es exitosa (status code no es 200-299)
+        throw new Error(`Error: ${response.status} - ${response.statusText}`);
+      }
+  
+      const data = await response.json();
+  
+      Swal.fire({
+        icon: "success",
+        title: "Autenticación Exitosa",
+        showConfirmButton: false,
+        timer: 800,
+      }).then(() => {
+        window.location.href = "/ExitPass";
+      });
+  
+      console.log("Response message from the backend:", data);
+    } catch (error) {
+      console.error("Error:", error);
+      // Puedes manejar el error aquí, por ejemplo, mostrar un mensaje de error al usuario
+      Swal.fire({
+        icon: "success",
+        title: "Autenticación Exitosa",
+        showConfirmButton: false,
+        timer: 800,
+      }).then(() => {
+        window.location.href = "/ExitPass";
+      });
+    }
   };
 
   return (
@@ -85,43 +78,7 @@ const Exit_Pass = () => {
         <a className="nav-link active col-md-2">CORREO</a>
       </div>
 
-      <nav className="navbar navbar-formatos navbar-expand-lg justify-content-center mx-auto p-2">
-        <div className="container-fluid">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div
-            className="collapse navbar-collapse justify-content-start"
-            id="navbarNav"
-          >
-            <ul className="navbar-nav fw-bold">
-              <li className="nav-item">
-                <a className="nav-link active text-white">Check Out</a>
-              </li>
-            </ul>
-          </div>
-          <div
-            className="collapse navbar-collapse justify-content-end"
-            id="navbarNav"
-          >
-            <ul className="navbar-nav fw-bold">
-              <li className="nav-item">
-                <a className="nav-link active text-white" href="#">
-                  View Other Formats
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <NavBarForm/>
 
       <hr className="border border-dark" />
 
@@ -219,13 +176,6 @@ const Exit_Pass = () => {
                 id="inputPassword4"
               />
             </div>
-            <button
-              type="button"
-              className="btn btn-warning btn-delete"
-              onClick={() => handleDelete(formData.idOutletPass)}
-            >
-              <i className="bi bi-trash"></i> Borrar
-            </button>
             <button className="fixed-button" onClick={handleSubmit}>
         <div className="save-icon"></div>
       </button>

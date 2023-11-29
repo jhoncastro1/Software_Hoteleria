@@ -5,6 +5,7 @@ const NavBar = () => {
 
     return(
         <>
+        
          <nav className="navbar navbar-formatos navbar-expand-lg justify-content-center mx-auto p-2">
      
           <button

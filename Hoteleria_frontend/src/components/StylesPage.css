@@ -1,7 +1,9 @@
 
 /*Encapsulamiento de columnas*/
 .room{
-    padding: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
 }
 
 .room-one{
@@ -379,8 +381,7 @@ a{
 .g-3-record, .gy-3-record{
     --bs-gutter-y: 0rem;
 }
-
-
-
-
-
+.separacion{
+    padding-left: 2%;
+    color: #95BFA4;
+}
