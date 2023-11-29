@@ -1,10 +1,14 @@
 import React from 'react'
 import './StylesPage.css'
+import NavBarMain from './NavBarMain'
+
 
 const Main_Page = () => {
   return (
     <main>
     
+    <NavBarMain></NavBarMain>
+
       <section className='d-lg-flex col-lg-12 min-vh-100 room'>
         <div className='col-lg-6 room'>
           <div className='py-lg-5'>
@@ -42,7 +46,7 @@ const Main_Page = () => {
         </div>
 
         <div className='col-lg-6 d-lg-flex'>
-          <div className='col-lg-2 d-lg-flex contener-one'>
+          <div className=' d-lg-flex contener-one'>
             <div className='col-lg-8 bg_color'>
               <div className='px-4 py-4'>
                 <div className='div_w_one'></div>

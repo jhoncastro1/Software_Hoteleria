@@ -3,7 +3,7 @@ package hoteleria.services.groupInstructions;
 import hoteleria.commons.constans.response.IResponse;
 import hoteleria.commons.converter.groupIntructions.GroupInstructionsConverter;
 import hoteleria.commons.domains.dto.groupInstructions.GroupInstructionsDTO;
-import hoteleria.model.entity.goupInstructions.GroupInstructionsEntity;
+import hoteleria.model.entity.groupInstructions.GroupInstructionsEntity;
 import hoteleria.model.repository.groupInstructions.IGroupInstructionsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

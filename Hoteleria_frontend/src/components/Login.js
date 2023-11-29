@@ -12,6 +12,7 @@ const Login = () => {
     clave: "",
   });
 
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -93,7 +94,7 @@ const Login = () => {
               <label className='text-start w-100'>Email:</label>
               <div>
                 <input
-                  className="border-top-0 border-end-0 border-start-0 justify-content-center"
+                   className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
                   type="text"
                   name="usuario"
                   value={formData.usuario}
@@ -104,7 +105,7 @@ const Login = () => {
             <div className='col-12' >
               <label>Contraseña:</label>
               <input
-                className="border-top-0 border-end-0 border-start-0"
+                 className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
                 type="password"
                 name="clave"
                 value={formData.clave}
