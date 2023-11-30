@@ -42,7 +42,7 @@ public class RecordReservationService {
                 iRecordReservationRepository.delete(find.get());
                 return IResponse.DELETE_SUCCESS;
             }else {
-                return IResponse.DELETE_SUCCESS;
+                return IResponse.DELETE_FAIL;
             }
         }
         catch (Exception e){
