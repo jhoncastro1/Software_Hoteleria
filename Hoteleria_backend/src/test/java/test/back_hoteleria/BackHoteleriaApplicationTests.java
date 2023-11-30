@@ -1,4 +1,4 @@
-package com.example.back_hoteleria;
+package test.back_hoteleria;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
