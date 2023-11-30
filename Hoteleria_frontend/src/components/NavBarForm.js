@@ -21,7 +21,7 @@ const NavbarForm = () =>{
             >
               <ul className="navbar-nav fw-bold">
                 <li className="nav-item">
-                  <a className="nav-link active text-white" href="/homePage" >Inicio</a>
+                  <a className="nav-link active text-white" href="/main" target="_blank" >Inicio</a>
                 </li>
               </ul>
             </div>
