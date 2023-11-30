@@ -1,9 +1,13 @@
 import React from 'react';
+import NavBarCheckOut from './NavBarCheckOut';
 
 
 const CheckOut = () => {
     return ( 
       <main>
+
+        <NavBarCheckOut/>
+        
         <section className='d-xl-flex align-items-center col-lg-12 min-vh-100 room'>
           <div className='col-lg-6 room'>
             <div className='py-5 col-lg-12 d-flex  text-center'>

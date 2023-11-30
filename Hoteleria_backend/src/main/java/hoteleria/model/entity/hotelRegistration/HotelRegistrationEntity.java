@@ -4,6 +4,8 @@ import hoteleria.commons.constans.tables.ITables;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.Date;
+
 @Entity
 @Getter
 @Setter
@@ -28,9 +30,23 @@ public class HotelRegistrationEntity {
     @Column(name = "country")
     private String country;
     @Column(name = "tel")
-    private Integer tel;
+    private String tel;
+    @Column(name = "typeid")
+    private String typeId;
+    @Column(name = "identification")
+    private String identification;
+    @Column(name = "oficio")
+    private String oficio;
+    @Column(name = "empresa")
+    private String empresa;
+    @Column(name = "telefono-empresa")
+    private String telefonoEmpresa;
     @Column(name = "transport")
     private String transport;
+    @Column(name = "arrive")
+    private Date arrive;
+    @Column(name = "out-customer")
+    private Date out;
     @Column(name = "reservation")
     private String reservation;
     @Column(name = "reason_for_travel")
@@ -44,7 +60,7 @@ public class HotelRegistrationEntity {
     @Column(name = "signature")
     private String signature;
     @Column(name = "accept_accommodation_contract")
-    private Integer acceptAccommodationContract;
+    private String acceptAccommodationContract;
     @Column(name = "room_rate")
     private Double roomRate;
 

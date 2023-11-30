@@ -3,9 +3,8 @@ import { BrowserRouter as Router, Route, Routes, Redirect, Switch, Navigate } fr
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-import Home from "./components/Home_page";
+
 import Login from "./components/Login";
-import NavbarHome from "./components/Navbar_Home";
 import Main from "./components/Main_Page";
 import AdminLogin from "./components/AdminLogin";
 
@@ -18,6 +17,7 @@ import ExitPass from "./components/Exit_Pass";
 import PageAdmin from "./components/Page_Admin";
 import Home_page from "./components/Home_page";
 import HotelRegistration from "./components/HotelRegistration";
+import RackReservation from "./components/RackReservation";
 
 function App() {
   const jwtToken = localStorage.getItem('jwtToken');
@@ -89,8 +89,8 @@ const ProtectedRoute = ({ element, path, ...props }) => {
         <Route path='/homePage' element={<Home_page />} />
         <Route path='/login' element={<Login />} />
         <Route path="/adminLogin" element={<AdminLogin/>} />
-        <Route path="/main" element={<Main/>} />
-        <Route path="/hotelRegistration" element={<HotelRegistration/>}/>
+        
+        
         {/* Default route with the sidebar and navbar */}
         <Route
           path='/*'
@@ -111,7 +111,9 @@ const ProtectedRoute = ({ element, path, ...props }) => {
 
                     {/* Other protected routes */}
                     <Route path="/login" element={<Login />} />
-                
+                <Route path="/RackReservation" element={<RackReservation/>}/>
+                <Route path="/main" element={<Main/>} />
+                <Route path="/hotelRegistration" element={<HotelRegistration/>}/>
                 <Route path="/checkIn" element={<CheckIn/>}/>
                 <Route path="/CustomerList" element={<CustomerList/>}/>
                 <Route path="/reservacionGrupal" element={<ReservacionGrupal/>}/>
