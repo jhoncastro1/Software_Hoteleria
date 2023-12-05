@@ -83,4 +83,67 @@ public class RecordReservationServiceTest {
 
         verify(iRecordReservationRepository, times(1)).findById(idRecord);
     }
+
+    @Test
+    public void testUpdateRecordReservationsSuccess() {
+        RecordReservationDTO recordReservationDTO = new RecordReservationDTO(1, "Jhon", LocalDate.now(), "Calle 11",
+                "31219", 2,LocalDate.now(), "SGL", 2, 2000.0, LocalDate.now(),
+                200.0, 1, "lucas", LocalDate.now(), "Es fea");
+        RecordReservationEntity recordReservationEntity = new RecordReservationEntity();
+
+
+        when(iRecordReservationRepository.findById(recordReservationDTO.getIdRecord())).thenReturn(Optional.of(recordReservationEntity));
+        when(recordReservationConverter.convertRecordReservationDTOToRecordReservationEntity(recordReservationDTO)).thenReturn(recordReservationEntity);
+
+        String result = recordReservationService.updateRecordReservations(recordReservationDTO);
+
+        assertEquals(IResponse.OPERATION_SUCCESS, result);
+        verify(iRecordReservationRepository, times(1)).findById(recordReservationDTO.getIdRecord());
+        verify(iRecordReservationRepository, times(1)).save(recordReservationEntity);
+    }
+
+    @Test
+    public void testUpdateRecordReservationsFail() {
+        RecordReservationDTO recordReservationDTO = new RecordReservationDTO(1, "Jhon", LocalDate.now(), "Calle 11",
+                "31219", 2,LocalDate.now(), "SGL", 2, 2000.0, LocalDate.now(),
+                200.0, 1, "lucas", LocalDate.now(), "Es fea");
+
+
+        when(iRecordReservationRepository.findById(recordReservationDTO.getIdRecord())).thenReturn(Optional.empty());
+
+        String result = recordReservationService.updateRecordReservations(recordReservationDTO);
+
+        assertEquals(IResponse.OPERATION_FAIL, result);
+        verify(iRecordReservationRepository, times(1)).findById(recordReservationDTO.getIdRecord());
+        verify(iRecordReservationRepository, never()).save(any());
+    }
+
+
+    @Test
+    public void testFindRecordReservationSuccess() {
+        Integer recordId = 1;
+
+
+        RecordReservationEntity recordReservationEntity = new RecordReservationEntity();
+        when(iRecordReservationRepository.findById(any())).thenReturn(Optional.of(recordReservationEntity));
+
+        String result = recordReservationService.findRecordReservation(recordId);
+
+        assertEquals(recordReservationEntity.toString(), Optional.of(recordReservationEntity).orElse(null).toString());
+        verify(iRecordReservationRepository, times(1)).findById(any());
+    }
+
+    @Test
+    public void testFindRecordReservationFail() {
+        Integer recordId = 1;
+
+
+        when(iRecordReservationRepository.findById(recordId)).thenReturn(Optional.empty());
+
+        String result = recordReservationService.findRecordReservation(recordId);
+
+        assertEquals(IResponse.OPERATION_FAIL, result);
+        verify(iRecordReservationRepository, times(1)).findById(recordId);
+    }
+
 }
