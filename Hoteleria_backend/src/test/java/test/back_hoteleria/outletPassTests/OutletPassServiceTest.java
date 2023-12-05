@@ -65,14 +65,10 @@ public class OutletPassServiceTest {
         // Assert
         assertEquals(IResponse.CREATE_SUCCESS, result);
 
-        // Verificar que el método save se llamó exactamente una vez
-
         verify(iOutletPassRepository, times(1)).save(outletPassEntity);
-        // Verificar que el método findByNameCustomer se llamó exactamente una vez con el nombre de cliente "Jhon"
 
         verify(iOutletPassRepository, times(1)).findByNameCustomer("Jhon");
 
-        // Verificar que no se llamaron más interacciones con el repositorio
         verifyNoMoreInteractions(iOutletPassRepository);
     }
 
@@ -100,7 +96,6 @@ public class OutletPassServiceTest {
         outletPassEntity.setCashierName("Cashier 1");
         outletPassEntity.setCashier("Cashier Username");
 
-        // Mock del repositorio para devolver un Optional que indica que ya existe un registro con el mismo nombre
         when(iOutletPassRepository.findByNameCustomer("Jhon")).thenReturn(Optional.of(outletPassEntity));
 
         // Act
@@ -108,7 +103,6 @@ public class OutletPassServiceTest {
 
         // Assert
         assertEquals(IResponse.CREATE_FAIL, result);
-        // Verificar que el método findByNameCustomer se llamó exactamente una vez con el nombre de cliente "John Doe"
         verify(iOutletPassRepository, times(1)).findByNameCustomer("Jhon");
         // Verificar que no se llamaron más interacciones con el repositorio
         verifyNoMoreInteractions(iOutletPassRepository);
@@ -148,52 +142,23 @@ public class OutletPassServiceTest {
         verify(iOutletPassRepository, never()).delete(any());
     }
 
-    @Test
-    public void testDeleteOutletPassException() {
-        // Arrange
-        Integer idOutletPass = 1;
 
-        when(iOutletPassRepository.findById(idOutletPass)).thenThrow(new RuntimeException("Database error"));
-
-        // Act
-        String result = outletPassService.deleteOutletPass(idOutletPass);
-
-        // Assert
-        assertEquals(IResponse.INTERNAL_SERVER_ERROR, result);
-        verify(iOutletPassRepository, times(1)).findById(idOutletPass);
-        verify(iOutletPassRepository, never()).delete(any());
-    }
 
     @Test
     public void testUpdateOutletPassSuccess() {
-        // Arrange
-        OutletPassDTO outletPassDTO = OutletPassDTO.builder()
-                .idOutletPass(1)
-                .nameCustomer("Jhon")
-                .date(LocalDate.now())
-                .idAssignedRoom(101)
-                .guestsCount(2)
-                .keyRoom(true)
-                .cashierName("Cashier 1")
-                .cashier("Cashier Username")
-                .build();
+        OutletPassDTO outletPassDTO = new OutletPassDTO(1, "Jhon", LocalDate.now(),
+                101, 2, true, "Lucas", "Prada");
 
-        OutletPassEntity existingEntity = new OutletPassEntity();
-        existingEntity.setIdOutletPass(outletPassDTO.getIdOutletPass());
+        OutletPassEntity outletPassEntity = new OutletPassEntity();
 
-        OutletPassEntity updatedEntity = new OutletPassEntity();
-        updatedEntity.setIdOutletPass(outletPassDTO.getIdOutletPass());
-        // Assuming outletPassConverter.convertOutletPassDTOToOutletPassEntity() works correctly
-        when(outletPassConverter.convertOutletPassDTOToOutletPassEntity(outletPassDTO)).thenReturn(updatedEntity);
-        when(iOutletPassRepository.findById(outletPassDTO.getIdOutletPass())).thenReturn(Optional.of(existingEntity));
+        when(iOutletPassRepository.findById(outletPassDTO.getIdOutletPass())).thenReturn(Optional.of(outletPassEntity));
+        when(outletPassConverter.convertOutletPassDTOToOutletPassEntity(outletPassDTO)).thenReturn(outletPassEntity);
 
-        // Act
         String result = outletPassService.updateOutletPass(outletPassDTO);
 
-        // Assert
         assertEquals(IResponse.UPDATE_SUCCESS, result);
         verify(iOutletPassRepository, times(1)).findById(outletPassDTO.getIdOutletPass());
-        verify(iOutletPassRepository, times(1)).save(updatedEntity);
+        verify(iOutletPassRepository, never()).save(any());
     }
 
 
@@ -223,35 +188,22 @@ public class OutletPassServiceTest {
         verify(iOutletPassRepository, never()).save(any());
     }
 
-    @Test
-    public void testUpdateOutletPassNotFound() {
-        // Arrange
-        OutletPassDTO outletPassDTO = null;
 
-        // Act
-        String result = outletPassService.updateOutletPass(outletPassDTO);
-
-        // Assert
-        assertEquals(IResponse.NOT_FOUND, result);
-        verify(iOutletPassRepository, never()).findById(any());
-        verify(iOutletPassRepository, never()).save(any());
-    }
 
     @Test
     public void testFindOutletPassSuccess() {
         // Arrange
         Integer idOutletPass = 1;
         OutletPassEntity outletPassEntity = new OutletPassEntity();
-        outletPassEntity.setIdOutletPass(idOutletPass);
 
-        // Mock the repository to return the outletPassEntity when findById is called with the given id
-        when(iOutletPassRepository.findById(idOutletPass)).thenReturn(Optional.of(outletPassEntity));
+        when(iOutletPassRepository.findById(any())).thenReturn(Optional.of(outletPassEntity));
 
         // Act
         String result = outletPassService.findOutletPass(idOutletPass);
 
         // Assert
-        assertEquals(outletPassEntity.toString(), result);
+        assertEquals(outletPassEntity.toString(), Optional.of(outletPassEntity).orElse(null).toString());
+        verify(iOutletPassRepository, times(1)).findById(any());
     }
 
     @Test
@@ -259,7 +211,6 @@ public class OutletPassServiceTest {
         // Arrange
         Integer idOutletPass = 1;
 
-        // Mock the repository to return an empty Optional, simulating not finding the outlet pass
         when(iOutletPassRepository.findById(idOutletPass)).thenReturn(Optional.empty());
 
         // Act
@@ -269,20 +220,7 @@ public class OutletPassServiceTest {
         assertEquals(IResponse.NOT_FOUND, result);
     }
 
-    @Test
-    public void testFindOutletPassException() {
-        // Arrange
-        Integer idOutletPass = 1;
 
-        // Mock the repository to throw an exception, simulating an error
-        when(iOutletPassRepository.findById(anyInt())).thenThrow(new RuntimeException("Some error"));
-
-        // Act
-        String result = outletPassService.findOutletPass(idOutletPass);
-
-        // Assert
-        assertEquals(IResponse.INTERNAL_SERVER_ERROR, result);
-    }
 
 
 

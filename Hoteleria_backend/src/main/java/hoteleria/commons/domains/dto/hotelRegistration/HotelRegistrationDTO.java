@@ -10,6 +10,7 @@ import java.util.Date;
 @Setter
 @ToString
 @Builder
+@AllArgsConstructor
 public class HotelRegistrationDTO {
 
     private Integer idHotelRegistration;

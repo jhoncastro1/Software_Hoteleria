@@ -25,10 +25,10 @@ public class ReservationService {
             Optional<Reservation_Entity> find = this.iReservationRepository.findById(reservationEntity.getReservation_id());
             if (!find.isPresent()){
                 this.iReservationRepository.save(reservationEntity);
-                return IResponse.OPERATION_SUCCESS;
+                return IResponse.CREATE_SUCCESS;
             }
             else {
-                return IResponse.OPERATION_FAIL;
+                return IResponse.CREATE_FAIL;
             }
         }
         catch (Exception e){
@@ -41,10 +41,10 @@ public class ReservationService {
             Optional<Reservation_Entity> find = iReservationRepository.findById(reservationId);
             if (find.isPresent()){
                 iReservationRepository.delete(find.get());
-                return IResponse.OPERATION_SUCCESS;
+                return IResponse.DELETE_SUCCESS;
             }
             else {
-                return IResponse.OPERATION_FAIL;
+                return IResponse.DELETE_FAIL;
             }
         }
         catch (Exception e){
@@ -61,10 +61,10 @@ public class ReservationService {
             if (find.isPresent()){
                 Reservation_Entity reservationEntity = reservationConverter.convertReservationDTOToReservationEntity(reservationDTO);
                 iReservationRepository.save(reservationEntity);
-                return IResponse.OPERATION_SUCCESS;
+                return IResponse.UPDATE_SUCCESS;
             }
             else {
-                return IResponse.OPERATION_FAIL;
+                return IResponse.UPDATE_FAIL;
             }
         }
         catch (Exception e){
@@ -80,7 +80,7 @@ public class ReservationService {
                 return findReservationMethod;
             }
             else {
-                return IResponse.OPERATION_FAIL;
+                return IResponse.NOT_FOUND;
             }
         }
         catch (Exception e){
