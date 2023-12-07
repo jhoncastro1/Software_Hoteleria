@@ -213,6 +213,12 @@ a{
     border-radius: 20px;
 }
 
+.bg_color_seven{
+    width: 20vh;
+    background-color: #F2EBDC;
+    border-radius: 20px;
+}
+
 
 /*Componente Hoteleria */
   .div_p{
@@ -287,6 +293,11 @@ a{
     height: 90%;
     align-items: center;
   }
+
+  .contener-three{
+    height: 20vh;
+    align-items: center;
+  }
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*CheckOut*/
 
@@ -351,6 +362,24 @@ a{
     border-radius: 20px;
 }
 
+.bg_color_eight{
+    width: 30vh;
+    height: 30vh;
+    top: 156px;
+    left: 730px;
+    background-color: rgba(242, 232, 223, 1);
+    border-radius: 20px;
+    font-size: smaller;
+}
+.bg_color_nine{
+    width: 30vh;
+    height: 30vh;
+    top: 156px;
+    left: 730px;
+    background-color: rgb(248, 238, 228, 1);
+    border-radius: 20px;
+    font-size: smaller;
+}
 /*Componente IR del home_Page color beige*/
 .div_w_six{
     width: 210px;
@@ -370,6 +399,10 @@ a{
 .subrayado-negrilla {
     font-weight: bold;
   }
+
+.juntar-div{
+    padding-right: 5%;
+}
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*ACCOMODATIONCONTRACT*/
@@ -411,5 +444,22 @@ a{
     width: 60px;
   }
   
-
+  .boton-mas {
+    border: none;
+    border-radius: 50%;
+    background-color: #95BFA4; /* Puedes ajustar el color de fondo según tus preferencias */
+    color: #fff; /* Puedes ajustar el color del texto según tus preferencias */
+    width: 40px; /* Puedes ajustar el tamaño del botón según tus preferencias */
+    height: 40px; /* Puedes ajustar el tamaño del botón según tus preferencias */
+    font-size: 18px; /* Puedes ajustar el tamaño del texto según tus preferencias */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none; /* Elimina el contorno del botón al hacer clic */
+  }
+  
+  .boton-mas:hover {
+    background-color: #90A19D; /* Cambia el color de fondo al pasar el ratón sobre el botón */
+  }
 

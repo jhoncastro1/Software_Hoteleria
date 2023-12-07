@@ -1,79 +1,408 @@
-import React from 'react'
-import "./Reservacion_Grupal.css";
+
+import NavbarForm from './NavBarForm';
+import React, { useState } from "react";
+import Swal from "sweetalert2";
 
 const Reservacion_Grupal = () => {
+  const [form, setFormData] = useState({
+    groupInstructionsId: 0,
+    name_group: "",
+    name_owner_group: "",
+    extra_account: "",
+    master_account: "",
+    pay: "",
+    view: "",
+    foodPlan: "",
+    arrival: "",
+    arrival_time: "",
+    output: "",
+    output_time: "",
+    old_count: 0,
+    young_count: 0,
+    total: 0,
+    simple_count: "",
+    double_count: "",
+    twin_count: "",
+    simple_paid: "",
+    double_paid: "",
+    twin_paid: "",
+    name_student: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    const newValue = type === "checkbox" ? checked : value;
+    setFormData({
+      ...form,
+      [name]: newValue,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("http://localhost:8080/groupInstructions/create", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status} - ${response.statusText}`);
+      }
+
+      const data = await response.json();
+
+      Swal.fire({
+        icon: "success",
+        showConfirmButton: false,
+        timer: 800,
+      }).then(() => {
+        window.location.href = "/groupInstructions";
+      });
+
+      console.log("Response message from the backend:", data);
+    } catch (error) {
+      console.error("Error:", error);
+      Swal.fire({
+        icon: "success",
+        showConfirmButton: false,
+        timer: 800,
+      }).then(() => {
+        window.location.href = "/groupInstructions";
+      });
+    }
+  };
+
   return (
-    <main> 
+    <>
+      <div className="row m-3">
+        <img src="your_image_url_here" alt="Your Image" className="IMG" />
+        <h5 className='display-4 font_wig'>
+          <div className='underline-up'><span className="palabra">Instructivo de grupos</span><div className="subrayado-OutletPass"></div ></div>
+        </h5>
+        <a className="nav-link active col-md-1">DESCARGAR</a>
+        <a className="nav-link active col-md-2">CORREO</a>
+      </div>
 
-        <section className='col-lg-12 d-flex'>
-            <div className='col-lg-12 row'>
-                <div className='col-lg-6'>
-                    <h2>
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 48 48">
-                    <path fill="#43a047" d="M37,45H11c-1.657,0-3-1.343-3-3V6c0-1.657,1.343-3,3-3h19l10,10v29C40,43.657,38.657,45,37,45z"></path><path fill="#c8e6c9" d="M40 13L30 13 30 3z"></path><path fill="#2e7d32" d="M30 13L40 23 40 13z"></path><path fill="#e8f5e9" d="M31,23H17h-2v2v2v2v2v2v2v2h18v-2v-2v-2v-2v-2v-2v-2H31z M17,25h4v2h-4V25z M17,29h4v2h-4V29z M17,33h4v2h-4V33z M31,35h-8v-2h8V35z M31,31h-8v-2h8V31z M31,27h-8v-2h8V27z"></path>
-                    </svg>
-                        Reserva grupal
-                    </h2>
+      <NavbarForm></NavbarForm>
+
+      <hr className="border border-dark" />
+      <div className="container align-items-center justify-content-center">
+        <section className="Seccion-Pass col-md-7 offset-md-3 d-flex align-items-center justify-content-center">
+          <div className="container-Exit-pass m-4">
+            <form className="row g-3 border dark">
+              <div className="col-12">
+                <div className="card border border-dark d-flex align-items-center justify-content-center">
+                  <div className="card-body">
+                    <h5 className="card-title">Instructivo de grupos</h5>
+                  </div>
                 </div>
-                <div className='col-lg-6'>
-                    
-                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                    </svg>
-                </div>
-            </div>
+
+              </div>
+              <div className="col-md-12">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Nombre del grupo:
+                </label>
+                <input
+                  type="text"
+                  className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
+                  id='name_group'
+                  name='name_group'
+                  value={form.name_group}
+                  onChange={handleChange} />
+              </div>
+              <div className="col-md-6">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Llegada:
+                </label>
+                <input
+                  type="date"
+                  className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
+                  id='arrival'
+                  name='arrival'
+                  onChange={handleChange}
+                  value={form.arrival} />
+              </div>
+
+              <div className="col-md-6">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Hora:
+                </label>
+                <input
+                  type="time"
+                  className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
+                  id='arrival_time'
+                  name='arrival_time'
+                  onChange={handleChange}
+                  value={form.arrival_time} />
+              </div>
+
+              <div className="col-md-6">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Sale:
+                </label>
+                <input
+                  type="date"
+                  className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
+                  id='output'
+                  name='output'
+                  value={form.output}
+                  onChange={handleChange} />
+              </div>
+
+              <div className="col-md-6">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Hora:
+                </label>
+                <input
+                  type="time"
+                  className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
+                  id='output'
+                  name='output'
+                  value={form.output_time}
+                  onChange={handleChange} />
+              </div>
+
+              <div className="col-md-8">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Nombre de el conductor del grupo:
+                </label>
+                <input
+                  type="text"
+                  className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
+                  id='name_owner_group'
+                  name='name_owner_group'
+                  value={form.name_owner_group}
+                  onChange={handleChange} />
+              </div>
 
 
-        </section> 
-        <section className='col-lg-12 d-flex justify-content-center'>
-            <div className='col-lg-8  border_special '>
-                <div className='col-lg-12 d-flex'>
-                    <h2 className='col-lg-6 text-center'>Instructivo de grupos</h2>
-                    <div className='col-lg-3 d-flex'>
-                        <p className='font_size_one'>LLEGA</p>
-                        <input className='input_special'></input>
-                    </div>
-                    <div className='col-lg-3 d-flex'>
-                        <p className='font_size_one'>HORA</p>
-                        <input className='input_special'></input>
-                    </div>
-                </div>
-                <div className='col-lg-12 d-flex'>
-                    
-                    <div className='col-lg-6 d-flex'>
-                        <p className='font_size_one padding-left'> NOMBRE DEL GRUPO</p>
-                        <input className='input_special'></input>
-                    </div>
-                    <div className='col-lg-3 d-flex'>
-                    <p className='font_size_one'>SALE</p>
-                        <input className='input_special'></input>
-                    </div>
-                    <div className='col-lg-3 d-flex'>
-                        <p className='font_size_one'>HORA</p>
-                        <input className='input_special' type=''></input>
-                    </div>
-                </div>
-                <div className='col-lg-12 d-flex border_top'>
-                <div className='col-lg-7'>
-                    <div className=' col-12 border_special_2'>
-                            <p className='font_size_one'>NOMBRE DEL CONDUCTOR DEL GRUPO:  </p>
-                            <input className='input_none' type='text'></input>  
-                    </div>
-                    <div className='border_special_2 '> 
-                            <p className='font_size_one'>PAGA: </p>
-                            <input className='input_none number' type='Number'></input> 
-                    </div>
-                </div>
-                <div className='col-lg-5 d-flex'>
-                    
-                </div>
-            </div>
-            </div>
+              <div className="col-md-4">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Paga:
+                </label>
+                <input
+                  type="number"
+                  className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
+                  id='pay'
+                  name='pay'
+                  onChange={handleChange}
+                  value={form.pay} />
+              </div>
+
+              <div className="col-md-12">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Observaciones:
+                </label>
+                <input
+                  type="text"
+                  className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
+                  id='view'
+                  name='view'
+                  onChange={handleChange}
+                  value={form.view} />
+              </div>
+
+
+              <div className="col-md-12">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Plan de alimentos:
+                </label>
+                <input
+                  type="text"
+                  className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
+                  id='foodPlan'
+                  name='foodPlan'
+                  onChange={handleChange}
+                  value={form.foodPlan} />
+              </div>
+
+              <div className="col-md-6">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Numero de personas del grupo:
+                </label>
+              </div>
+
+              <div className="col-md-2">
+                <label htmlFor="old_count" className="form-label-Nombre">
+                  Adultos:
+                </label>
+                <input
+                  type="number"
+                  className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
+                  id='old_count'
+                  name='old_count'
+                  onChange={handleChange}
+                  value={form.old_count} />
+              </div>
+
+              <div className="col-md-2">
+                <label htmlFor="young_count" className="form-label-Nombre">
+                  Menores:
+                </label>
+                <input
+                  type="number"
+                  className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
+                  id='young_count'
+                  name='young_count'
+                  value={form.young_count}
+                  onChange={handleChange} />
+              </div>
+
+              <div className="col-md-2">
+                <label htmlFor="total" className="form-label-Nombre">
+                  Total:
+                </label>
+                <input
+                  type="number"
+                  className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
+                  id='total'
+                  name='total'
+                  onChange={handleChange}
+                  value={form.total}
+                  readOnly
+                />
+              </div>
+
+              <div className="col-md-6">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Cantidad de habitaciones:
+                </label>
+              </div>
+
+              <div className="col-md-2">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Sencillas:
+                </label>
+                <input
+                  type="number"
+                  className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
+                  id='simple_count'
+                  name='simple_count'
+                  value={form.simple_count}
+                  onChange={handleChange} />
+              </div>
+
+              <div className="col-md-2">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Dobles:
+                </label>
+                <input
+                  type="number"
+                  className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
+                  id='double_count'
+                  name='double_count'
+                  onChange={handleChange}
+                  value={form.double_count} />
+              </div>
+
+              <div className="col-md-2">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Twin:
+                </label>
+                <input
+                  type="number"
+                  className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
+                  id='twin_count'
+                  name='twin_count'
+                  onChange={handleChange}
+                  value={form.twin_count} />
+              </div>
+
+
+              <div className="col-md-6">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Tarifa confirmada por habitacion:
+                </label>
+              </div>
+
+              <div className="col-md-2">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Sencillas:
+                </label>
+                <input
+                  type="number"
+                  className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
+                  id='simple_paid'
+                  name='simple_paid'
+                  onChange={handleChange}
+                  value={form.simple_paid} />
+              </div>
+
+              <div className="col-md-2">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Dobles:
+                </label>
+                <input
+                  type="number"
+                  className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
+                  id='double_paid'
+                  name='double_paid'
+                  onChange={handleChange}
+                  value={form.double_paid} />
+              </div>
+
+              <div className="col-md-2">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Twin:
+                </label>
+                <input
+                  type="number"
+                  className="form-control form-control-nombre border-top-0 border-end-0 border-start-0 border-dark"
+                  id='twin_paid'
+                  name='twin_paid'
+                  onChange={handleChange}
+                  value={form.twin_paid}
+                />
+              </div>
+
+              <div className="col-md-6">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Cuenta de extras:
+                </label>
+                <select
+                  className="form-select-Key form-select-md mg-3 form-control border border-dark"
+                  aria-label=".form-select-lg example"
+                  id='extra_account'
+                  name='extra_account'
+                  value={form.extra_account}
+                  onChange={handleChange}>
+                  <option value="No">No</option>
+                  <option value="Si">Si</option>
+                </select>
+              </div>
+
+              <div className="col-md-6">
+                <label htmlFor="fullName" className="form-label-Nombre">
+                  Cuenta maestra:
+                </label>
+                <select
+                  className="form-select-Key form-select-md mg-3 form-control border border-dark"
+                  aria-label=".form-select-lg example"
+                  id='master_account'
+                  name='master_account'
+                  onChange={handleChange}
+                  value={form.master_account}>
+                  <option value="No">No</option>
+                  <option value="Si">Si</option>
+                </select>
+              </div>
+
+              <button className="fixed-button" onClick={handleSubmit}>
+                <div className="save-icon"></div>
+              </button>
+
+            </form>
+          </div>
         </section>
-    </main>
-    
-  )
-}
+      </div>
+    </>
+
+  );
+};
 
 export default Reservacion_Grupal
