@@ -21,12 +21,13 @@ public class GroupInstructionsDTO {
     private Integer groupInstructionsId;
     private String name_group;
     private String name_owner_group;
+    private Integer pay;
+    private String view;
+    private String foodPlan;
     private boolean extra_account;
     private boolean master_account;
-    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate arrival;
     private LocalDateTime arrival_time;
-    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate output;
     private LocalDateTime output_time;
     private Integer old_count;

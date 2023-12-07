@@ -17,52 +17,68 @@ const Exit_Pass = () => {
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     const newValue = type === "checkbox" ? checked : value;
+
     setFormData({
       ...formData,
       [name]: newValue,
     });
+
   };
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
+
       const response = await fetch("http://localhost:8080/outletPass/create", {
         method: "POST",
         headers: {
+
           "Content-Type": "application/json",
+
         },
+
         body: JSON.stringify(formData),
+
       });
-  
+
       if (!response.ok) {
-        // Manejar casos donde la respuesta no es exitosa (status code no es 200-299)
+
         throw new Error(`Error: ${response.status} - ${response.statusText}`);
+
       }
-  
+
       const data = await response.json();
-  
+
       Swal.fire({
+
         icon: "success",
-        title: "Autenticación Exitosa",
         showConfirmButton: false,
         timer: 800,
+
       }).then(() => {
+
         window.location.href = "/ExitPass";
+
       });
-  
+
       console.log("Response message from the backend:", data);
+
     } catch (error) {
+
       console.error("Error:", error);
-      // Puedes manejar el error aquí, por ejemplo, mostrar un mensaje de error al usuario
+
       Swal.fire({
+
         icon: "success",
-        title: "Autenticación Exitosa",
         showConfirmButton: false,
         timer: 800,
+
       }).then(() => {
+
         window.location.href = "/ExitPass";
+
       });
     }
   };
@@ -72,13 +88,13 @@ const Exit_Pass = () => {
       <div className="row m-3">
         <img src="your_image_url_here" alt="Your Image" className="IMG" />
         <h5 className='display-4 font_wig'>
-              <div className='underline-up'><span className="palabra">Pase De Salida</span><div className="subrayado-OutletPass"></div ></div> 
-            </h5> 
+          <div className='underline-up'><span className="palabra">Pase De Salida</span><div className="subrayado-OutletPass"></div ></div>
+        </h5>
         <a className="nav-link active col-md-1">DESCARGAR</a>
         <a className="nav-link active col-md-2">CORREO</a>
       </div>
 
-      <NavBarForm/>
+      <NavBarForm />
 
       <hr className="border border-dark" />
 
@@ -203,11 +219,11 @@ const Exit_Pass = () => {
               />
             </div>
             <button className="fixed-button" onClick={handleSubmit}>
-        <div className="save-icon"></div>
-      </button>
+              <div className="save-icon"></div>
+            </button>
           </form>
         </div>
-        
+
       </section>
     </>
   );
