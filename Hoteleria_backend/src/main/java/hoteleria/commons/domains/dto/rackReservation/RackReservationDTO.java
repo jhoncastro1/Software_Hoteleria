@@ -13,6 +13,7 @@ public class RackReservationDTO {
     private Integer rackId;
     private String companyName;
     private Integer noRooms;
-    private Integer month;
+    private Integer room;
+    private String month;
     private Integer day;
 }

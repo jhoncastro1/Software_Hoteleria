@@ -24,8 +24,11 @@ public class RackReservationEntity {
     @Column(name = "no_rooms")
     private Integer noRooms;
 
+    @Column(name = "room")
+    private Integer room;
+
     @Column(name = "month")
-    private Integer month;
+    private String month;
 
     @Column(name = "day")
     private Integer day;

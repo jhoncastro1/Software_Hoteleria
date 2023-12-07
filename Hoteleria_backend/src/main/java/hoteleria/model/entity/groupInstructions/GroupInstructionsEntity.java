@@ -29,6 +29,15 @@ public class GroupInstructionsEntity {
     @Column(name = "name_owner_group")
     private String name_owner_group;
 
+    @Column(name = "pay")
+    private Integer pay;
+
+    @Column(name = "view")
+    private String view;
+
+    @Column(name = "food_plan")
+    private String foodPlan;
+
     @Column(name = "extra_account")
     private boolean extra_account;
 
@@ -36,7 +45,6 @@ public class GroupInstructionsEntity {
     private boolean master_account;
 
     @Column(name = "arrival")
-    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate arrival;
 
     @Column(name = "arrival_time")
