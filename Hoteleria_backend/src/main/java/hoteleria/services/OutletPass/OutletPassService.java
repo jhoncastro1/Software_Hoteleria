@@ -46,6 +46,7 @@ public class OutletPassService {
             Optional<OutletPassEntity> find = iOutletPassRepository.findById(outletPassDTO.getIdOutletPass());
             if (find.isPresent()){
                 OutletPassEntity outletPassEntity = outletPassConverter.convertOutletPassDTOToOutletPassEntity(outletPassDTO);
+                this.iOutletPassRepository.save(outletPassEntity);
                 return IResponse.UPDATE_SUCCESS;
             }else {return IResponse.UPDATE_FAIL;}
         }catch (Exception e){return IResponse.INTERNAL_SERVER_ERROR;}

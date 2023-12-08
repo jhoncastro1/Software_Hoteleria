@@ -7,7 +7,7 @@ public interface ITables {
     String TABLE_CHECK_OUT = "checkout";
     String TABLE_OUTLET_PASS = "outlet_pass";
     String TABLE_RACK_RESERVATION = "rack_reservation";
-
+    String TABLE_PAY = "pay";
     String TABLE_RECORD_RESERVATIONS = "record_reservations";
     String TABLE_RESERVATIONS = "reservations";
     String TABLE_ROOM_LIST_GROUP = "room_list_group";

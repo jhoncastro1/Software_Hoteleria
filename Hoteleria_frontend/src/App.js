@@ -128,10 +128,6 @@ function App() {
                         path='/homePage'
                         element={<Home_page />}
                       />
-                      <Route
-                        path="/PageAdmin"
-                        element={<ProtectedRoute element={<PageAdmin />} path="/PageAdmin" />}
-                      />
 
                       {/* Other protected routes */}
                       <Route path="/login" element={<Login />} />

@@ -30,7 +30,7 @@ const RegisterCheckin = () => {
                     <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
                         <ul class="navbar-nav fw-bold">
                             <li class="nav-item">
-                                <a class="nav-link active text-white ">Home</a>
+                                <a class="nav-link active text-white " href='/PageAdmin'>Home</a>
                             </li>
 
                             <li class="nav-item navbar-nav fw-bold">
