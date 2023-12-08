@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-12-2023 a las 07:32:58
+-- Tiempo de generación: 08-12-2023 a las 19:40:52
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -197,6 +197,38 @@ CREATE TABLE `outlet_pass` (
 
 INSERT INTO `outlet_pass` (`id_outlet_pass`, `name_customer`, `date`, `id_assigned_room`, `guests_count`, `key_room`, `name_student`, `cashier`) VALUES
 (11, 'Jhon', '2023-11-23', 101, 2, 1, 'asdsadsa', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `pay`
+--
+
+CREATE TABLE `pay` (
+  `id_pay` int(11) NOT NULL,
+  `descuentos` int(11) NOT NULL,
+  `name_customer` varchar(200) NOT NULL,
+  `number` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `room` varchar(200) NOT NULL,
+  `people` int(11) NOT NULL,
+  `cambio` int(11) NOT NULL,
+  `balance` int(11) NOT NULL,
+  `seguro` int(11) NOT NULL,
+  `tmo` int(11) NOT NULL,
+  `restaurante` int(11) NOT NULL,
+  `consumo` int(11) NOT NULL,
+  `minibar` int(11) NOT NULL,
+  `gastostel` int(11) NOT NULL,
+  `miscelaneos` int(11) NOT NULL,
+  `lavanderia` int(11) NOT NULL,
+  `totalcargos` int(11) NOT NULL,
+  `abonos` int(11) NOT NULL,
+  `ncaja` varchar(200) NOT NULL,
+  `totalpagar` int(11) NOT NULL,
+  `observaciones` varchar(200) NOT NULL,
+  `identificacion` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 

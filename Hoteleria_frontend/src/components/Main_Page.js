@@ -13,9 +13,9 @@ const Main_Page = () => {
         <div className='col-lg-6 room'>
           <div className='py-lg-5'>
             <h1 className='display-3 font_wig'>
-              Tú aprendizaje es lo
+              Tú aprendizaje es
               <div className='underline-up'>
-                <span className="palabra">Mas importante</span>
+                <span className="palabra">lo mas importante</span>
                 <div className="subrayado"></div>
               </div> Para nosotros
             </h1>
@@ -24,7 +24,7 @@ const Main_Page = () => {
             <p className='font_size'>Estamos comprometidos en proporcionarte las herramientas y recursos necesarios para que alcances tus metas de formación en hotelería de la manera más efectiva y enriquecedora posible</p>
           </div>
           <div className='py-5 col-lg-12 d-lg-flex justify-content-center text-center'>
-            <a href='/' className='py-5 my-5 col-lg-4'>
+            <a href='/reservacion' className='py-5 my-5 col-lg-4'>
               <svg xmlns="http://www.w3.org/2000/svg" className='svg_width' fill="currentColor" viewBox="0 0 16 16">
                 <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zm-5.146-5.146-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
               </svg>
@@ -36,7 +36,7 @@ const Main_Page = () => {
               </svg>
               <h3 className='font_size py-4'>Check-In</h3>
             </a>
-            <a href='/' className='py-5 my-5 col-lg-4'>
+            <a href='/checkout' className='py-5 my-5 col-lg-4'>
               <svg xmlns="http://www.w3.org/2000/svg" className='svg_width' fill="currentColor" viewBox="0 0 16 16">
                 <path d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z" />
               </svg>
