@@ -21,12 +21,33 @@ import HotelRegistration from "./components/HotelRegistration";
 import RackReservation from "./components/RackReservation";
 import Facturacion from "./components/Facturacion";
 import Reservacion from "./components/Reservacion";
+import RegisterCheckin from "./components/RegistroCheckin";
+import RegisterCheckout from "./components/RegistroCheckOut";
+import RegistroReservacion from "./components/RegistroReservacion";
 
 function App() {
   const jwtToken = localStorage.getItem('jwtToken');
   console.log(jwtToken);
   let role = "";
 
+  function limpiarLocalStoragePeriodicamente() {
+    // Establece un intervalo para limpiar el localStorage cada 8 horas (8 horas * 60 minutos * 60 segundos * 1000 milisegundos)
+    setInterval(function () {
+      limpiarLocalStorage();
+    }, 8 * 60 * 60 * 1000);
+  }
+
+  function limpiarLocalStorage() {
+    try {
+      localStorage.clear();
+      console.log("LocalStorage limpiado correctamente.");
+    } catch (error) {
+      console.error("Error al limpiar LocalStorage:", error);
+    }
+  }
+
+  // Llama a la función para iniciar la limpieza periódica
+  limpiarLocalStoragePeriodicamente();
 
   function isTokenExpired(jwtToken) {
     if (!jwtToken) {
@@ -107,10 +128,6 @@ function App() {
                         path='/homePage'
                         element={<Home_page />}
                       />
-                      <Route
-                        path="/PageAdmin"
-                        element={<ProtectedRoute element={<PageAdmin />} path="/PageAdmin" />}
-                      />
 
                       {/* Other protected routes */}
                       <Route path="/login" element={<Login />} />
@@ -127,6 +144,11 @@ function App() {
                       <Route path="/RecordReservations" element={<RecordReservations />} />
                       <Route path="/facturacion" element={<Facturacion />} />
                       <Route path="/reservacion" element={<Reservacion />} />
+
+
+                      <Route path="/registroCheckin" element={<RegisterCheckin />} />
+                      <Route path="/registroCheckout" element={<RegisterCheckout />} />
+                      <Route path="/registroReservacion" element={<RegistroReservacion />} />
 
                     </Routes>
                   </div>

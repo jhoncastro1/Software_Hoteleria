@@ -31,7 +31,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         // contraseña "secreto"
         var password = "$2a$10$56VCAiApLO8NQYeOPiu2De/EBC5RWrTZvLl7uoeC3r7iXinRR1iiq";
         Usuario jhon = new Usuario(
-                "jhon",
+                "jhoncastro2004eg@gmail.com",
                 password,
                 Set.of("USER")
         );
