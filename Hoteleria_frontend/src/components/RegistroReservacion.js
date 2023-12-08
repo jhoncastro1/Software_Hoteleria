@@ -13,6 +13,7 @@ const RegistroReservacion = () => {
                         <ul class="navbar-nav fw-bold">
                             <li class="nav-item">
                                 <a class="nav-link active text-white " href='/PageAdmin'>Home</a>
+
                             </li>
 
                             <li class="nav-item navbar-nav fw-bold">

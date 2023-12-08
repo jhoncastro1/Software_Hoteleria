@@ -3,7 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-12-2023 a las 19:40:52
+
+-- Tiempo de generación: 07-12-2023 a las 07:32:58
+
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -200,9 +202,9 @@ INSERT INTO `outlet_pass` (`id_outlet_pass`, `name_customer`, `date`, `id_assign
 
 -- --------------------------------------------------------
 
---
+
 -- Estructura de tabla para la tabla `pay`
---
+
 
 CREATE TABLE `pay` (
   `id_pay` int(11) NOT NULL,
@@ -230,9 +232,6 @@ CREATE TABLE `pay` (
   `identificacion` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `rack_reservation`
 --
 
