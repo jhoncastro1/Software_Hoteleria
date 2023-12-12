@@ -137,7 +137,6 @@ public class RecordReservationServiceTest {
     public void testFindRecordReservationFail() {
         Integer recordId = 1;
 
-
         when(iRecordReservationRepository.findById(recordId)).thenReturn(Optional.empty());
 
         String result = recordReservationService.findRecordReservation(recordId);

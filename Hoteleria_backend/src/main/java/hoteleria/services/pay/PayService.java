@@ -53,7 +53,7 @@ public class PayService {
             if (payDTO == null || payDTO.getId_pay() == null){
                 return IResponse.NOT_FOUND;
             }
-            Optional<PayEntity> find = iPayRepository.findById(payDTO.getId_pay());
+            Optional<PayEntity> find = this.iPayRepository.findById(payDTO.getId_pay());
             if (find.isPresent()){
                 PayEntity payEntity = payConverter.convertPayDTOToPayEntity(payDTO);
                 this.iPayRepository.save(payEntity);
